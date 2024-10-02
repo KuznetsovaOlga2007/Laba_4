@@ -7,7 +7,7 @@ def square_area(a):
 
 '''
 a (float): side of square
-return value (float): perimetr of square
+return value (float): perimeter of square
 '''
 def square_perimeter(a):
     return 4 * a

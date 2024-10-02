@@ -8,7 +8,7 @@ def triangle_area(a, h):
 
 '''
 a, b, c (float): is a sides of triangle
-return value (float): perimetr of triangle
+return value (float): perimeter of triangle
 '''
 def triangle_perimeter(a, b, c): 
     return a + b + c 
