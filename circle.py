@@ -16,7 +16,7 @@ def area(r):
 
 
 def perimeter(r):
-        '''
+    '''
     Принимает радиус окружности, возвращает её периметр.
 
             Параметры:
@@ -27,4 +27,3 @@ def perimeter(r):
     '''
     P = 2 * math.pi * r
     return P
-
