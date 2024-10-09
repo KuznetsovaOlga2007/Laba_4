@@ -166,3 +166,15 @@ print(perimeter(5, 6, 7))       # 18
 print(perimeter(3, 2.4, 4))     # 9.4
 print(perimeter(1.7, 5.2, 3.8)) # 10.7
 ```
+## **История изменения проекта с хэшами коммитов**
+
+- `8ba9aeb3cea847b63a91ac378a2a6db758682460` L-03: Circle and square added
+- `d078c8d9ee6155f3cb0e577d28d337b791de28e2 (origin/new_features_465546, origin/main, origin/HEAD, main)` L-03: Docs added
+- `41ee87607a02b019ab4d1be2af858c71237b7d57` new file on rectangle added
+- `08475497dffe7e30322a82dbdf63c0beccf1e5cb` file on triangle added and error on rectangle fixed
+- `ba348b9878d67c6e9117b2745b6a461a055ffc92` comments on functions in circle.py added
+- `8f33efa3e5d22a2b88065d224a8629cfbbf0afcc` comments on functions in rectangle.py added
+- `367ad6c89f4f6141958c54c87ed98e6aa4aeb821` comments on functions in square.py added
+- `409c027e27f28c61fb3cc77712d493c6aaa4389e` comments on functions in triangle.py added
+- `ca696325bf3e7da45e5a472852cf5895e9d405dc` minor cosmetic changes on rectangle.py and triangle.py
+- `0beff003d049cd59c6a45e07de318c9566711425 (HEAD -> new_features_465546)` documentation added in readme file
