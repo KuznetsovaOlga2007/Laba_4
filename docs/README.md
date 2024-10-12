@@ -73,3 +73,21 @@
 
 * Once the figure name, function name, and sizes are input, the `calc` function is called with these arguments.
 
+# History of changes
+
+* Early Development (March 2021)
+         +The project started with the addition of circle and square shapes (commit `8ba9aeb3cea847b63a91ac378a2a6db758682460` by `smartiqa` on March 4, 2021)
+         +Docs were added for the initial shapes (commit `d078c8d9ee6155f3cb0e577d28d337b791de28e2` by `smartiqa` on March 4, 2021)
+* Feature Branch Development (March 2021)
+         + A feature branch was created, and the following changes were made:
+         + Rectangle shape was added (commit `30494317cde4419be779c14306561e0eaa78b88b` by `Daniil.K` on March 30, 2021)
+         + Calculate.py was added (commit `d76db2ac7f69cc920ae2e6f669fb0671a7fa7d71` by `Daniil.K` on March 30, 2021)
+         + Docs were updated for calculate.py (commit `b5b0fae727ca72c317c383b39c0af73d6adcd81c` by `Daniil.K` on March 30, 2021)
+* Main Branch Development (March 2021)
+         + Triangle shape was added (commit `d080c7888b81955bad2ed78d58ad910526b5132a` by `smartiqa` on March 26, 2021)
+         + Docs were updated for triangle (commit `51c40ebfd0e0b65f52fe5e54740cbb038e492db3` by `smartiqa` on March 26, 2021)
+* Release Branch Development (April 2021)
+         + A release branch was created, and the following changes were made:
+         + User agreement was added (commit `438b89a1dfc58d90e9036fe431771427965cd1ff` by `Danny` on April 19, 2021)
+         + Docs were updated with user agreement info (commit `86edb1c3dd57fa9abc7ba2ec7052507938084727` by `Danny` on April 19, 2021)
+       
