@@ -6,6 +6,16 @@
 4. Enter figure sizes. Radius for circle, one side for square.
 5. Get the answer!
 
+* Example 1: Circle Perimeter
+ 	+ Input: Figure name: circle, Function name: perimeter, Size: 10
+	+ Output: perimeter of circle is 31.41592653589793
+* Example 2: Square Area
+	+ Input: Figure name: square, Function name: area, Size: 5
+	+ Output: area of square is 25
+* Example 3: Circle Area
+	+ Input: Figure name: circle, Function name: area, Size: 10
+	+ Output: area of circle is 314.1592653589793
+
 # Math formulas
 ## Area
 - Circle: `S = πR²`
@@ -18,4 +28,48 @@
 - Rectangle: `P = 2a + 2b`
 - Square: `P = 4a`
 - Triangle: `P = a + b + c`
+
+# Calculator code breakdown:
+**Step 1: Importing Modules**
+
+* The code starts by importing two modules: `circle` and `square`. These modules are assumed to contain functions for calculating the perimeter and area of each shape.
+
+**Step 2: Defining Variables**
+
+* Three lists are defined:
+	+ `figs`: a list containing the figure names, which are `circle` and `square`.
+	+ `funcs`: a list containing the function names, which are `perimeter` and `area`.
+	+ `sizes`: an empty dictionary that will be used to store the number of sizes required for each figure and function combination.
+
+**Step 3: Defining the `calc` Function**
+
+* The `calc` function is defined, which takes three arguments:
+	+ `fig`: the figure name (either `circle` or `square`).
+	+ `func`: the function name (either `perimeter` or `area`).
+	+ `size`: a list of sizes required for the calculation.
+* The function asserts that the figure and function names are valid, and then uses the `eval` function to dynamically call the corresponding function from the imported modules.
+* The result of the calculation is printed to the console.
+
+**Step 4: Main Program**
+
+* The main program starts by initializing three variables:
+	+ `fig`: an empty string to store the figure name.
+	+ `func`: an empty string to store the function name.
+	+ `size`: an empty list to store the sizes required for the calculation.
+
+**Step 5: Inputting Figure Name**
+
+* A `while` loop is used to input the figure name from the user. The loop continues until a valid figure name is entered (either `circle` or `square`).
+
+**Step 6: Inputting Function Name**
+
+* Another `while` loop is used to input the function name from the user. The loop continues until a valid function name is entered (either `perimeter` or `area`).
+
+**Step 7: Inputting Sizes**
+
+* A third `while` loop is used to input the sizes required for the calculation. The loop continues until the correct number of sizes is entered, which is determined by the `sizes` dictionary. For example, if the figure is a circle and the function is perimeter, only one size is required.
+
+**Step 8: Calling the `calc` Function**
+
+* Once the figure name, function name, and sizes are input, the `calc` function is called with these arguments.
 
