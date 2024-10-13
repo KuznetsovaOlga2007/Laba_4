@@ -1,4 +1,4 @@
-# Общее описание решения
+# Общее описание решения (Обновлённая версия)
 This code is a Python script for calculating the area and perimeter of shapes such as a circle and a square.
 The script allows the user to enter the name of the shape, the desired function (area or perimeter) and the dimensions of the shape.
 As a result, the program calculates the value and displays it on the screen.
