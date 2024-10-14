@@ -44,3 +44,14 @@
 
 
 # История изменений проекта
+Добавил новый файл - rectangle.py
+commit e3db881c2c48f7f52e02b5d80a4be8fb1cfcbf98
+
+Добавил новый файл - triangle.py
+commit 9eae82cb57b69572687850567dfe7786ce6909df
+
+Исправил ошибку в файле - rectangle.py
+commit c4bd0023306e8cac552cf2e898c65c58bd67d9d3
+
+Добавил комментарии во все файлы
+commit 63079e254410c3be3b922b5df0a82a61a447e5e0
