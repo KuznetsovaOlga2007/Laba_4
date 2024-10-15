@@ -1,0 +1,35 @@
+name: CI/CD tests
+
+on:
+  push:
+    branches:  
+      - "cicd_286955"
+      
+jobs:
+  ubuntu_compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run : |
+          python -m unittest "circle_tests.py"
+          python -m unittest "rectangle_tests.py"
+          python -m unittest "square_tests.py"
+          python -m unittest "triangle_tests.py"
+
+  windows_compatibility:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Unit tests
+        run : |
+          python -m unittest "circle_tests.py"
+          python -m unittest "rectangle_tests.py"
+          python -m unittest "square_tests.py"
+          python -m unittest "triangle_tests.py"
