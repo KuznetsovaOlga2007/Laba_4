@@ -6,32 +6,40 @@ Library have four files, each have functions for calculate area and perimeter fi
 
 ## Calculate area
 ```python
-# For circle
-# Return 314.1592653589793
+'''
+For circle
+Return 314.1592653589793
+'''
 circle_area(10)
 
-# Return 25.132741228718345
+''' Return 25.132741228718345 '''
 circle_perimeter(4)
 
-# For triangle
-# Return 30
+'''
+For triangle
+Return 30
+'''
 triangle_area(6, 10)
 
-# Return 23
+''' Return 23 '''
 triangle_perimeter(7, 7, 9)
 
-# For rectangle
-# Return 72
+'''
+For rectangle
+Return 72
+'''
 rectangle_area(6, 12)
 
-# Return 26
+''' Return 26 '''
 rectangle_perimeter(9, 4)
 
-# For square
-# Return 100
+'''
+For square
+Return 100
+'''
 square_area(10)
 
-# Return 24
+''' Return 24 '''
 square_perimeter(6)
 ```
 
