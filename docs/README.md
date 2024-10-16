@@ -1,6 +1,6 @@
 # My math library for calculate area and perimeter of some geometric figures
 
-Library have four files, each for self figure
+Library have four files, each have functions for calculate area and perimeter figures
 
 # Example use library function:
 
