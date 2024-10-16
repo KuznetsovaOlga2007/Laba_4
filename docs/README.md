@@ -60,9 +60,17 @@ square_area(10)
 square_perimeter(6)
 ```
 
-# Links to implementation commits
+# History of work
 
-- [Circle](https://github.com/itmo-coder/geometric_lib_fork/tree/8ba9aeb3cea847b63a91ac378a2a6db758682460)
-- [Square](https://github.com/itmo-coder/geometric_lib_fork/tree/8ba9aeb3cea847b63a91ac378a2a6db758682460)
-- [Triangle](https://github.com/itmo-coder/geometric_lib_fork/tree/586b6da25c268a0002b860dcdee1e89d6d586824)
-- [Rectangle](https://github.com/itmo-coder/geometric_lib_fork/tree/ba98d8d99032d9beee83558f505919ad219f4622)
+- [[8dbc702](https://github.com/itmo-coder/geometric_lib_fork/tree/8dbc702512914a38746887ff7fcc0e7fa6669fd5)] add: examples of returns in README.md
+
+- [[4b75e8d](https://github.com/itmo-coder/geometric_lib_fork/tree/4b75e8d343704df927ded1658fb99009a94968fb)] fix: use one style in all files
+
+- [[f5a915a](https://github.com/itmo-coder/geometric_lib_fork/tree/f5a915ab1a760668251c3e50d5b30f14fb5eb70c)] add: description for all function and fix names
+
+- [[ba98d8d](https://github.com/itmo-coder/geometric_lib_fork/tree/ba98d8d99032d9beee83558f505919ad219f4622)] fix: calculate perimetr of rectangle
+
+- [[586b6da](https://github.com/itmo-coder/geometric_lib_fork/tree/586b6da25c268a0002b860dcdee1e89d6d586824)] add: functions for calculate triangle area and perimetr
+
+- [[201cab2](https://github.com/itmo-coder/geometric_lib_fork/tree/201cab27083eb43ac003b53db7406185303d14f4)] add: file for calculate rectangle area and perimetr
+
