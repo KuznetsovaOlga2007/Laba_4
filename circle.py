@@ -7,7 +7,7 @@ def area(r):
                 r (double): radius of the circle
             Returned values:
                 circle_area (double): area of the circle '''
-    return math.pi * r * r
+    return round(round(math.pi, 2) * r * r, 2)
 
 
 def perimeter(r):
@@ -16,5 +16,5 @@ def perimeter(r):
                 r (double): radius of the circle
             Returned values:
                 circle_per (double): perimeter of the circle '''
-    return 2 * math.pi * r
+    return round(2 * round(math.pi, 2) * r, 2)
 

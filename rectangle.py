@@ -5,7 +5,7 @@ def area(a, b):
                 b (double): second side
             Returned values:
                 rec_area (double): area of the rectangle '''
-    return a * b 
+    return round(a * b, 2)
 
 def perimeter(a, b):
     ''' Find the perimeter of rectangle
@@ -14,4 +14,4 @@ def perimeter(a, b):
                 b (double): second side
             Returned values:
                 rec_perimeter (double): perimeter of the rectangle '''
-    return (a + b) * 2
+    return round((a + b) * 2, 2)

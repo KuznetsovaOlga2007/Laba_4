@@ -5,7 +5,7 @@ def area(a, h):
                 h (double): height of triangle
             Returned values:
                 trian_area (double): area of the triangle '''
-    return a * h / 2 
+    return round(a * h / 2, 2)
 
 def perimeter(a, b, c):
     ''' Find the perimeter of triangle
@@ -15,4 +15,4 @@ def perimeter(a, b, c):
                 c (double): third side
             Returned values:
                 trian_per (double): petimeter of the triangle '''
-    return a + b + c
+    return round(a + b + c, 2)
