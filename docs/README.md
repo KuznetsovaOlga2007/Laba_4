@@ -26,8 +26,10 @@ Example:
 ```python
 from circle import area, perimeter
 
-area(r=1)
-perimeter(r=1)
+print(area(r=1))
+# 3.14
+print(perimeter(r=1))
+# 6.28
 ```
 
 ### Triangle
@@ -40,8 +42,10 @@ Example:
 ```python
 from triangle import area, perimeter
 
-area(a=1, h=1)
-perimeter(a=1, b=2, c=3)
+print(area(a=1, h=1))
+# 0.5
+print(perimeter(a=1, b=2, c=3))
+# 6
 ```
 
 ### Rectangle
@@ -54,8 +58,10 @@ Example:
 ```python
 from rectangle import get_rectangle_area, get_rectangle_perimeter
 
-get_rectangle_area(a=1, b=2)
-get_rectangle_perimeter(a=1, b=2)
+print(get_rectangle_area(a=1, b=2))
+# 2
+print(get_rectangle_perimeter(a=1, b=2))
+# 6
 ```
 
 ### Square
@@ -68,8 +74,10 @@ Example:
 ```python
 from square import area, perimeter
 
-area(a=1)
-perimeter(a=1)
+print(area(a=1))
+# 1
+print(perimeter(a=1))
+# 4
 ```
 
 ## Release Notes
