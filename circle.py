@@ -10,6 +10,10 @@ def area(r):
 
     Returns:
         float: Circle's area
+
+    Example:
+        area(1)
+        # 3.14
     """
     return math.pi * r * r
 
@@ -23,5 +27,9 @@ def perimeter(r):
 
     Returns:
         float: Circle's perimeter
+
+    Example:
+        perimeter(1)
+        # 6.28
     """
     return 2 * math.pi * r

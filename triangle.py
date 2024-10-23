@@ -8,6 +8,10 @@ def area(a: float, h: float) -> float:
 
     Returns:
         float: Tiangle's area
+
+    Example:
+        area(1, 2)
+        # 1
     """
     return a * h / 2 
 
@@ -22,5 +26,9 @@ def perimeter(a: float, b: float, c: float) -> float:
 
     Returns:
         float: Tiangle's perimeter
+
+    Example:
+        perimeter(1, 2, 3)
+        # 6
     """
     return a + b + c 

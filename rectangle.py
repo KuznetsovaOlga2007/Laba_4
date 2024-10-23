@@ -8,6 +8,10 @@ def get_rectangle_area(a: float, b: float) -> float:
 
     Returns:
         float: Rectangle's area
+
+    Example:
+        get_rectangle_area(1, 2)
+        # 2
     """
     return a * b
 
@@ -21,5 +25,9 @@ def get_rectangle_perimeter(a: float, b: float) -> float:
 
     Returns:
         float: Rectangle's perimeter
+
+    Example:
+        get_rectangle_area(1, 2)
+        # 6
     """
     return 2 * (a + b)
