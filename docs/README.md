@@ -25,11 +25,11 @@ Library can use for calculate area and perimeter for:
 ```python
 '''
 For circle
-Return 314.1592653589793
+Return 314.1592653589
 '''
 circle_area(10)
 
-''' Return 25.132741228718345 '''
+''' Return 25.1327412287 '''
 circle_perimeter(4)
 
 '''
@@ -60,7 +60,20 @@ square_area(10)
 square_perimeter(6)
 ```
 
+# About unit tests
+
+Unit tests in this library check a lot of different situation  
+
+For example test vision function which we use negative arguments
+
+___
+
+ Use next command for start unit test for concrete file of library
+
+`python -m unittest <name file>`
+
 # History of work
+- [[24e3fca](https://github.com/itmo-coder/geometric_lib_fork/commit/24e3fcafd3cf951e431bc7c93831a6cb9866bdbd)] add: unit test for all functions
 
 - [[8dbc702](https://github.com/itmo-coder/geometric_lib_fork/tree/8dbc702512914a38746887ff7fcc0e7fa6669fd5)] add: examples of returns in README.md
 
