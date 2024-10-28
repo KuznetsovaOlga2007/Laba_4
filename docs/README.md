@@ -19,3 +19,7 @@
 - Square: `P = 4a`
 - Triangle: `P = a + b + c`
 
+## Troubleshooting
+- Input Errors: Ensure you enter valid numeric values for dimensions.
+- Figure Not Recognized: Make sure to enter the figure name exactly as shown (case-sensitive).
+- Help: If you encounter issues, check your Python environment and libraries.
