@@ -4,7 +4,7 @@
 2. Enter the figure name. Available are Circle, Square.
 3. Enter the function: Area or Perimeter.
 4. Enter figure sizes. Radius for circle, one side for square.
-5. Get the answer!
+5. Get the answer! Congratulations!
 
 # Math formulas
 ## Area
