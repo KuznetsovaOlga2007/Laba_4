@@ -62,9 +62,9 @@ square_perimeter(6)
 
 # About unit tests
 
-Unit tests in this library check a lot of different situation  
+Unit tests in this library check a lot of different situation
 
-For example test vision function which we use negative arguments
+[For get more information](tests.pdf)
 
 ___
 
