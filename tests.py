@@ -10,11 +10,11 @@ class RectangleTestCase(unittest.TestCase):
         res = rectangle.area (0, 0)
         self.assertEqual(res, 0)
     def test_area_two (self) :
-        res = rectangle.area (2, 2)
-        self.assertEqual(res, 4)
+        res = rectangle.area (2,2.5)
+        self.assertEqual(res, 5)
     def test_area_ten (self) :
-        res = rectangle.area (10, 4)
-        self.assertEqual(res, 40)
+        res = rectangle.area (10, 4.5)
+        self.assertEqual(res, 45)
     def test_per_zero (self) :
         res = rectangle.perimeter (10 , 0)
         self.assertEqual(res, 20)
@@ -25,8 +25,8 @@ class RectangleTestCase(unittest.TestCase):
         res = rectangle.perimeter (3, 2)
         self.assertEqual(res, 10)
     def test_per_ten (self) :
-        res = rectangle.perimeter (10, 4)
-        self.assertEqual(res, 28)
+        res = rectangle.perimeter (10, 3.5)
+        self.assertEqual(res, 27)
 class CircleTestCase(unittest.TestCase) :
     def test_area_null (self) :
         res = circle.area (0)
@@ -58,8 +58,8 @@ class SquareTestCase(unittest.TestCase) :
         res = square.area (0)
         self.assertEqual(res, 0)
     def test_area_two (self) :
-        res = square.area (2)
-        self.assertEqual(res, 4)
+        res = square.area (4.5)
+        self.assertEqual(res, 20.25)
     def test_area_eight (self) :
         res = square.area (8)
         self.assertEqual(res, 64)
