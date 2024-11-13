@@ -256,16 +256,17 @@ if __name__ == '__main__':
 ```
 # Project modification history with commit hashes (except the last commit about this documentary)
 ```
+7ae5609 Added a new feature "hypotenuse" and created unittests in tests.py for some functions
+1738904 (origin/new_features_467339) Change some phrases in How the programs works
+c65f121 Change parameter ruby to python
+f92cef8 Comment about restoring a deleted branch has been deleted
+970a962 Delete ruby in LAUNCH EXAMPLES
+2622278 Added last 2 commits from 1 lab
+409b207 Added project's history in README.md
+274c9b9 In the beginning added info about deleted branch
+4cfd515 Created documentary in README.md
 1b60bf6 Create triangle.py and fix rectangle's perimeter
 72c6001 Create rectangle.py
-86edb1c (origin/release) L-05: Update Docs. Add user agreement info
-438b89a L-05: Add user agreement
-6adb962 L-03: Docs added
-3049431 (origin/feature) L-04: Add rectangle.py
-b5b0fae (origin/develop) L-04: Update docs for calculate.py
-d76db2a L-04: Add calculate.py
-51c40eb L-04: Doc updated for triangle
-d080c78 L-04: Triangle added
-d078c8d (origin/main, origin/HEAD, main) L-03: Docs added
+d078c8d (upstream/main, upstream/HEAD, origin/main, main) L-03: Docs added
 8ba9aeb L-03: Circle and square added
 ```
