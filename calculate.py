@@ -5,6 +5,7 @@ import square
 figs = ['circle', 'square']
 funcs = ['perimeter', 'area']
 sizes = {}
+ 
 
 def calc(fig, func, size):
     '''Возвращает результат вычислений для указанных фигуры и функции'''
@@ -12,6 +13,7 @@ def calc(fig, func, size):
     assert func in funcs, f"Unknown function: {func}"
     
     return eval(f'{fig}.{func}(*{size})')
+
 
 if __name__ == "__main__":
 	func = ''

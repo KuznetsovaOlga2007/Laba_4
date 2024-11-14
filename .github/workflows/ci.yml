@@ -43,7 +43,7 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 geometric_lib tests
+          flake8 .
 
       - name: Run tests
         run: |
