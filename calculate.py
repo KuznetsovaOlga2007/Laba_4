@@ -5,7 +5,7 @@ sizes = {}
 
 def calc(fig, func, size):
     """Возвращает результат вычислений для указанных
-    фигуры и функции"""
+    фигуры и функции."""
     assert fig in figs, f"Unknown figure: {fig}"
     assert func in funcs, f"Unknown function: {func}"
 
@@ -19,11 +19,11 @@ if __name__ == "__main__":
 
     while fig not in figs:
         """Цикл продолжается до тех пор, пока пользователь не введет 
-        корректные данные для figs"""
+        корректные данные для figs."""
         fig = input(f"Enter figure name, available are {figs}:\n")
 
     while func not in funcs:
-        """Аналогично первому циклу, но для funcs"""
+        """Аналогично первому циклу, но для funcs."""
         func = input(f"Enter function name, available are {funcs}:\n")
 
     while len(size) != sizes.get(f"{func}-{fig}", 1):
@@ -33,7 +33,9 @@ if __name__ == "__main__":
         size = list(
             map(
                 int,
-                input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')
+                input(
+                    "Input figure sizes separated by space, 1 for circle and square\n"
+                ).split()
             )
         )
 
