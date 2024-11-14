@@ -1,4 +1,5 @@
 from square import area, perimeter
+import pytest
 
 
 def test_square_area():
