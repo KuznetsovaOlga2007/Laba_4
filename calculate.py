@@ -2,6 +2,7 @@ from circle import area as circle_area, perimeter as circle_perimeter
 from square import area as square_area, perimeter as square_perimeter
 from triangle import area as triangle_area, perimeter as triangle_perimeter
 
+
 figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
 
@@ -10,6 +11,7 @@ figures = {
     'square': {'area': square_area, 'perimeter': square_perimeter},
     'triangle': {'area': triangle_area, 'perimeter': triangle_perimeter}
 }
+
 
 sizes = {
     'circle-area': 1,
@@ -20,6 +22,7 @@ sizes = {
     'triangle-perimeter': 3
 }
 
+
 def calc(fig, func, size):
     assert fig in figs, f"Unknown figure: {fig}"
     assert func in funcs, f"Unknown function: {func}"
@@ -29,7 +32,9 @@ def calc(fig, func, size):
 
     return figures[fig][func](size)
 
+
 if __name__ == "__main__":
+
     func = ''
     fig = ''
     size = []
