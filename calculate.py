@@ -30,7 +30,7 @@ def calc(fig, func, size):
     key = f'{fig}-{func}'
     assert len(size) == sizes[key], f"Incorfor {fig} {func}"
 
-    return figures[fig][func](size)
+    return figures[fig][func](*size)
 
 
 if __name__ == "__main__":
