@@ -44,11 +44,8 @@ jobs:
       - name: Lint with flake8
         run: |
           flake8 .
-      
-      - name: Set PYTHONPATH
-      run: |
-      export PYTHONPATH=$PYTHONPATH:$(pwd)
 
       - name: Run tests
         run: |
           pytest
+          
