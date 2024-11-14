@@ -77,6 +77,12 @@
     Пример вызова: perimeter(1, 2, 3) => 6<br/>
 </details>
 
+## Тесты
+1. test_area_zero test_per_zero тестируют вернет ли функция 0
+2. test_area_int test_per_int принимает целые числа и тестирует, верно ли работает программа на целых числах
+3. test_per_float test_area_float принимает числа с плавающей точкой и тестирует, верно ли работают функции на числах с плавающей точкой
+4. test_area_number test_per_number принимает число с плавающей точкой и целое число и тестирует, верно ли работают функции на введенных числах
+
 ### Last changes
 2abf1449ba500576d2a4536834ea6e56a89180bb (HEAD -> new_features_465141) mistake in rectangle.py fixed<br/>
 f8764d7bdb8af7cade93c316343ebf800fc77744 file rectangle.py added<br/>
