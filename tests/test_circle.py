@@ -1,6 +1,5 @@
 from circle import area, perimeter
 import pytest
-import math
 
 
 def test_circle_area():
