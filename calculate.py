@@ -15,7 +15,7 @@ def calc(fig, func, size):
 if __name__ == "__main__":
     func = ''
     fig = ''
-    size = list()
+    size = []
 
     while fig not in figs:
         """Цикл продолжается до тех пор, пока пользователь не введет 
@@ -33,10 +33,7 @@ if __name__ == "__main__":
         size = list(
             map(
                 int,
-                input(
-                    """Input figure sizes separated 
-                    by space, 1 for circle and square\n"""
-                ).split(' ')
+                input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')
             )
         )
 
