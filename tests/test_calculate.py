@@ -1,6 +1,10 @@
 from calculate import calc
 import pytest
 
+figs = ['circle', 'square']
+funcs = ['perimeter', 'area']
+sizes = {}
+
 
 def test_calc_circle_area():
     # Проверка вычисления площади круга
