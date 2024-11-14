@@ -1,4 +1,4 @@
-from triangle import area, perimeter
+from square import area, perimeter
 import pytest
 
 
