@@ -28,8 +28,7 @@ def calc(fig, func, size):
     assert func in funcs, f"Unknown function: {func}"
 
     key = f'{fig}-{func}'
-    assert len(size) == sizes[key],
-     f"Incorrect number of arguments for {fig} {func}"
+    assert len(size) == sizes[key], f"Incorfor {fig} {func}"
 
     return figures[fig][func](size)
 
