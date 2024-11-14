@@ -1,4 +1,4 @@
-from calculate import calc
+from geometric_lib.calculate import calc
 import pytest
 
 
