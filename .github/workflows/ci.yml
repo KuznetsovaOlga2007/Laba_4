@@ -41,11 +41,13 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)/geometric_lib" >> $GITHUB_ENV
+
       - name: Lint with flake8
         run: |
-          flake8 .
+          flake8 geometric_lib tests
 
       - name: Run tests
         run: |
           pytest
-          
