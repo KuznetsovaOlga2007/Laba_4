@@ -1,4 +1,4 @@
-from geometric_lib.circle import area, perimeter
+from circle import area, perimeter
 import pytest
 
 

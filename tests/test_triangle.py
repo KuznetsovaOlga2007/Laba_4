@@ -1,4 +1,4 @@
-from geometric_lib.triangle import area, perimeter
+from triangle import area, perimeter
 import pytest
 
 

@@ -1,4 +1,4 @@
-from geometric_lib.square import area, perimeter
+from square import area, perimeter
 
 
 def test_square_area():
