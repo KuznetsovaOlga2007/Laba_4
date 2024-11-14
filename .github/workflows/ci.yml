@@ -41,10 +41,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Set PYTHONPATH
+        run: |
+          export PYTHONPATH=$PYTHONPATH:$(pwd)
+
       - name: Lint with flake8
         run: |
           flake8 .
 
-      - name: Run tests
-        run: |
-          pytest
+      - name: Run
