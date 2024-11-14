@@ -1,4 +1,5 @@
 from triangle import area, perimeter
+import pytest
 
 
 def test_triangle_area():
