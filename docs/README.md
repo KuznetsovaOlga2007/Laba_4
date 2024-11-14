@@ -77,7 +77,14 @@ def perimeter() принимает переменную **a** - *сторона 
 > Input: 7 
 
 > Output: 28
-
+### Описание тестов
+Реализация тестов находится в 'unitestGeometry.py'
+## Тесты с корректными входными данными
+def test_areaCircle(self)
+## Тесты с неккоректными входными данными
+def test_areaCircle_string(self)
+def test_areaCircle_negative(self)
+def test_areaCircle_zero(self)
 ## История измения проекта
 
 ### 1-ый 'commit'
@@ -86,14 +93,26 @@ def perimeter() принимает переменную **a** - *сторона 
 
 Хэш: e531f062cf049c3d014912c2968f28347e6487ea
 
-### 2-ый 'commit'
+### 2-ой 'commit'
   
 *Added triangle.py and fixed rectangle.py*
   
 Хэш: e5b1d06d1fa7022363337c92b1aa2f925ab5466a
   
-### 3-ый 'commit'
+### 3-ий 'commit'
   
 *Added comments in files*
   
 Хэш:  3e6808ad40290c7a666d4b67c1cae1ecd471d250
+
+### 4-ый 'commit'
+
+*Added Geometry.py*
+
+Хэш: fa344deb288eeb6b0ee1308bd8cb3a56b6732b14
+
+## 5-ый 'commit'
+
+*Added unittests*
+
+Хэш: ee5bd1989fe3cf86594cc30f71c2d8c684a2e1df
