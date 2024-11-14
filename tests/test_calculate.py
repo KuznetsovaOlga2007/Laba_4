@@ -4,7 +4,8 @@ import pytest
 from calculate import calc
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../geometric_lib')))
+sys.path.insert(0, os.path.abspath
+(os.path.join(os.path.dirname(__file__), '../geometric_lib')))
 
 
 def test_calc_circle_area():
