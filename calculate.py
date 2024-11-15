@@ -2,13 +2,13 @@ import circle
 import square
 import triangle  # Importing triangle module
 
-# List of available figures
+# Список доступных фигур
 figs = ['circle', 'square', 'triangle']
 
-# List of available functions for calculation
+# Список доступных функций для расчета
 funcs = ['perimeter', 'area']
 
-# Dictionary to store the number of size parameters required for each figure
+# Словарь для хранения размеров фигур
 sizes = {
     'circle': 1,
     'square': 1,
@@ -25,17 +25,17 @@ fig_modules = {
 
 def calc(fig: str, func: str, size: list) -> float:
     """
-    Calculates and returns the result for the specified figure and function.
+    Вычисляет и выводит результат для заданной фигуры и функции.
 
-    Parameters:
-    fig (str): Name of the figure (e.g., 'circle', 'square', 'triangle').
-    func (str): Name of the function to calculate (e.g., 'perimeter', 'area').
-    size (list): List of parameters for the figure (e.g., radius for circle).
+    Параметры:
+    fig (str): название фигуры (например, 'circle' или 'square').
+    func (str): название функции для расчета (например, 'perimeter' или 'area').
+    size (list): список параметров фигуры (например, радиус для круга).
 
-    Returns:
-    float: The result of the calculation.
+    Возвращаемое значение:
+    float: результат расчета
 
-    Example:
+    Пример вызова:
     calc('circle', 'area', [5])
     """
     if fig not in figs:
@@ -55,15 +55,15 @@ if __name__ == "__main__":
     fig = ''
     size = []
 
-    # Request figure name from the user
+    # Запрос имени фигуры у пользователя
     while fig not in figs:
         fig = input(f"Enter figure name, available are {figs}:\n")
 
-    # Request function name from the user
+    # Запрос имени функции у пользователя
     while func not in funcs:
         func = input(f"Enter function name, available are {funcs}:\n")
 
-    # Request figure parameters from the user
+    # Запрос параметров фигуры у пользователя
     while len(size) != sizes.get(fig, 1):
         try:
             size = list(
@@ -77,5 +77,5 @@ if __name__ == "__main__":
         except ValueError:
             print("Please enter valid integer values.")
 
-    # Call the calculation function and output the result
+    # Вызов функции для расчета и вывода результата
     calc(fig, func, size)
