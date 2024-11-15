@@ -20,7 +20,7 @@ jobs:
         run: |
           echo "Сыромятников Аристарх Алексеевич"
           echo "M3111"
-          echo "Ник на GitHub: ${{ github.actor }}"
+          echo "Ник на GitHub: Bleys999"
 
       - name: Set up Python 3.13
         uses: actions/setup-python@v4
