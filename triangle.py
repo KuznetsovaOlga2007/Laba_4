@@ -1,10 +1,15 @@
 import math
 
+def area(a, b, c):
+    # Проверяем, возможно ли построить треугольник с такими сторонами
+    if a + b <= c or a + c <= b or b + c <= a:
+        raise ValueError("Triangle inequality violated")
+    # Полупериметр
+    s = (a + b + c) / 2
+    return math.sqrt(s * (s - a) * (s - b) * (s - c))
 
-def area(a):
-    p = (a[0] + a[1] + a[2]) / 2
-    return math.sqrt(p * (p - a[0]) * (p - a[1]) * (p - a[2]))
-
-
-def perimeter(a):
-    return a[0] + a[1] + a[2]
+def perimeter(a, b, c):
+    # Проверяем, возможно ли построить треугольник с такими сторонами
+    if a + b <= c or a + c <= b or b + c <= a:
+        raise ValueError("Triangle inequality violated")
+    return a + b + c
