@@ -12,4 +12,3 @@ class TestTriangle:
             "The sum of any two sides must be greater than the third side."
             in str(exc_info.value)
         )
-
