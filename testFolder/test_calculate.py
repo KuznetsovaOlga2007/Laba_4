@@ -14,7 +14,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == pytest.approx(expected), f"Expected perimeter {expected}, got {result}"
+        assert result == pytest.approx(expected), (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_calc_area_circle(self):
         # Arrange
@@ -27,7 +29,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_calc_perimeter_square(self):
         # Arrange
@@ -40,7 +44,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_calc_area_square(self):
         # Arrange
@@ -53,7 +59,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected area {expected}, got {result}"
+        assert result == expected, (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_calc_perimeter_triangle(self):
         # Arrange
@@ -66,7 +74,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_calc_area_triangle(self):
         # Arrange
@@ -80,7 +90,9 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_calc_invalid_figure(self):
         # Arrange
