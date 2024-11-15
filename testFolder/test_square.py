@@ -12,7 +12,9 @@ class TestSquare:
         result = area(side)
 
         # Assert
-        assert result == expected, f"Expected area {expected}, got {result}"
+        assert result == expected, (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_square_perimeter_positive_side(self):
         # Arrange
@@ -23,7 +25,9 @@ class TestSquare:
         result = perimeter(side)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_square_area_negative_side(self):
         # Arrange
