@@ -3,21 +3,18 @@ import math
 
 def area(a: float, b: float, c: float) -> float:
     """
-    Calculates the area of a triangle given its three sides using Heron's formula.
+    Вычисляет площадь треугольника по заданным сторонам с использованием формулы Герона.
 
-    Parameters:
-    a (float): Length of the first side of the triangle.
-    b (float): Length of the second side of the triangle.
-    c (float): Length of the third side of the triangle.
+    Параметры:
+    a (float): длина первой стороны треугольника.
+    b (float): длина второй стороны треугольника.
+    c (float): длина третьей стороны треугольника.
 
-    Returns:
-    float: Area of the triangle.
+    Возвращаемое значение:
+    float: площадь треугольника.
 
     Raises:
-    ValueError: If any side is non-positive or the sides do not satisfy the triangle inequality.
-
-    Example:
-    area(3, 4, 5) -> 6.0
+    ValueError: Если стороны не удовлетворяют условиям существования треугольника.
     """
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("All sides must be positive.")
@@ -29,21 +26,18 @@ def area(a: float, b: float, c: float) -> float:
 
 def perimeter(a: float, b: float, c: float) -> float:
     """
-    Calculates the perimeter of a triangle given its three sides.
+    Вычисляет периметр треугольника по заданным сторонам.
 
-    Parameters:
-    a (float): Length of the first side of the triangle.
-    b (float): Length of the second side of the triangle.
-    c (float): Length of the third side of the triangle.
+    Параметры:
+    a (float): длина первой стороны треугольника.
+    b (float): длина второй стороны треугольника.
+    c (float): длина третьей стороны треугольника.
 
-    Returns:
-    float: Perimeter of the triangle.
+    Возвращаемое значение:
+    float: периметр треугольника.
 
     Raises:
-    ValueError: If any side is non-positive or the sides do not satisfy the triangle inequality.
-
-    Example:
-    perimeter(3, 4, 5) -> 12.0
+    ValueError: Если стороны не удовлетворяют условиям существования треугольника.
     """
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("All sides must be positive.")
