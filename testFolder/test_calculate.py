@@ -84,7 +84,7 @@ class TestCalc:
         func = 'area'
         size = [3, 4, 5]
         s = (3 + 4 + 5) / 2
-        expected = (s * (s - 3) * (s - 4) * (s - 5)) ** 0.5  # Heron's formula
+        expected = (s * (s - 3) * (s - 4) * (s - 5)) ** 0.5
 
         # Act
         result = calc(fig, func, size)
