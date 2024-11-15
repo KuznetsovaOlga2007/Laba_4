@@ -13,7 +13,9 @@ class TestCircle:
         result = area(radius)
 
         # Assert
-        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_circle_perimeter_positive_radius(self):
         # Arrange
@@ -24,7 +26,9 @@ class TestCircle:
         result = perimeter(radius)
 
         # Assert
-        assert result == pytest.approx(expected), f"Expected perimeter {expected}, got {result}"
+        assert result == pytest.approx(expected), (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_circle_area_negative_radius(self):
         # Arrange
