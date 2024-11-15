@@ -1,6 +1,6 @@
 import pytest
 import math
-from ..triangle import area, perimeter
+from triangle import area, perimeter
 
 
 class TestTriangle:
