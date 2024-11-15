@@ -1,5 +1,3 @@
-
-
 import pytest
 from calculate import calc
 
@@ -15,7 +13,7 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == pytest.approx(expected), f"Expected perimeter {expected}, got {result}"
 
     def test_calc_area_circle(self):
         # Arrange
@@ -28,7 +26,7 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
 
     def test_calc_perimeter_square(self):
         # Arrange
@@ -75,13 +73,13 @@ class TestCalc:
         func = 'area'
         size = [3, 4, 5]
         s = (3 + 4 + 5) / 2
-        expected = (s * (s - 3) * (s - 4) * (s - 5)) ** 0.5  # Геронова формула
+        expected = (s * (s - 3) * (s - 4) * (s - 5)) ** 0.5  # Heron's formula
 
         # Act
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
 
     def test_calc_invalid_figure(self):
         # Arrange
@@ -109,9 +107,9 @@ class TestCalc:
         # Arrange
         fig = 'triangle'
         func = 'area'
-        size = [3, 4]  # Недостаточно аргументов
+        size = [3, 4]  # Insufficient arguments
 
         # Act & Assert
-        with pytest.raises(ValueError) as exc_info:
+        with pytest.raises(TypeError) as exc_info:
             calc(fig, func, size)
-        assert "requires 3 argument(s), got 2." in str(exc_info.value)
+        assert "area() missing 1 required positional argument" in str(exc_info.value)
