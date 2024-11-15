@@ -23,7 +23,7 @@ class TestSquare:
         result = perimeter(side)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, f"Expected  {expected}, got {result}"
 
     def test_square_area_negative_side(self):
         # Arrange
