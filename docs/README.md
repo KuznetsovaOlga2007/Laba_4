@@ -80,11 +80,11 @@ def perimeter() принимает переменную **a** - *сторона 
 ### Описание тестов
 Реализация тестов находится в 'unitestGeometry.py'
 ## Тесты с корректными входными данными
-def test_areaCircle(self)
+> def test_areaCircle(self)
 ## Тесты с неккоректными входными данными
-def test_areaCircle_string(self)
-def test_areaCircle_negative(self)
-def test_areaCircle_zero(self)
+> def test_areaCircle_string(self)
+> def test_areaCircle_negative(self)
+> def test_areaCircle_zero(self)
 ## История измения проекта
 
 ### 1-ый 'commit'
