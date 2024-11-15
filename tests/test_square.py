@@ -1,5 +1,5 @@
 import pytest
-from ..square import area, perimeter
+from square import area, perimeter
 
 
 class TestSquare:
