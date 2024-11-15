@@ -26,4 +26,7 @@ class TestCalc:
         size = [3, 4]
         with pytest.raises(TypeError) as exc_info:
             calc(fig, func, size)
-        assert "area() missing 1 required positional argument: 'c'" in str(exc_info.value)
+        assert (
+            "area() missing 1 required positional argument: 'c'"
+            in str(exc_info.value)
+        )
