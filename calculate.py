@@ -29,8 +29,8 @@ def calc(fig: str, func: str, size: list) -> float:
 
     Параметры:
     fig (str): название фигуры (например, 'circle' или 'square').
-    func (str): название функции для расчета (например, 'perimeter' или 'area').
-    size (list): список параметров фигуры (например, радиус для круга).
+    func (str): название функции для расчета ('perimeter' или 'area').
+    size (list): список параметров фигуры ( радиус для круга).
 
     Возвращаемое значение:
     float: результат расчета
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 map(
                     int,
                     input(
-                        "Input figure sizes separated by space, e.g., 1 for circle and square, 3 for triangle\n"
+                        "Input figure sizes separated by space\n"
                     ).split()
                 )
             )
