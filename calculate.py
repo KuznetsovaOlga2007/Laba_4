@@ -56,10 +56,10 @@ if __name__ == "__main__":
         func = input(f"Enter function name, available are {funcs}:\n")
 
     # Запрос параметров фигуры у пользователя
-    while len(size) != sizes.get(fig, 1) :
+    while len(size) != sizes.get(fig, 1):
         try:
             size = list(map(int, input("\n").split()))
-        except ValueError :
+        except ValueError:
             print("Please enter valid integer values.")
 
     # Вызов функции для расчета и вывода результата
