@@ -28,9 +28,9 @@ def calc(fig: str, func: str, size: list) -> float:
     Вычисляет и выводит результат для заданной фигуры и функции.
 
     Параметры:
-    fig (str): название фигуры (например, 'circle', 'square' или 'triangle').
-    func (str): название функции для расчета (например, 'perimeter' или 'area').
-    size (list): список параметров фигуры (например, радиус для круга).
+    fig (str): название фигуры ().
+    func (str): название функции для расчета ().
+    size (list): список параметров фигуры ().
 
     Возвращаемое значение:
     float: результат расчета.
@@ -56,11 +56,11 @@ if __name__ == "__main__":
     size = []
 
     # Запрос имени фигуры у пользователя
-    while fig not in figs:
+    while fig not in figs: 
         fig = input(f"Enter figure name, available are {figs}:\n")
 
     # Запрос имени функции у пользователя
-    while func not in funcs:
+    while func not in funcs: 
         func = input(f"Enter function name, available are {funcs}:\n")
 
     # Запрос параметров фигуры у пользователя
