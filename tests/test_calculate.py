@@ -2,6 +2,12 @@ import pytest
 from geometric_lib.calculate import calc
 
 
+project_root = os.path.abspath(
+    os.path.join(os.path.dirname(__file__), '../')
+)
+sys.path.insert(0, project_root)
+
+
 def test_calc_circle_area():
     assert calc('circle', 'area', [3]) == pytest.approx(28.27, 0.01)
 
