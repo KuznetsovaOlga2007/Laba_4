@@ -46,8 +46,8 @@ jobs:
 
       - name: Set PYTHONPATH
         run: |
-          echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
-          export PYTHONPATH=$(pwd)
+          echo "PYTHONPATH=$(pwd):$(pwd)/geometric_lib" >> $GITHUB_ENV
+          export PYTHONPATH=$(pwd):$(pwd)/geometric_lib  # Устанавливаем текущую директорию и geometric_lib в PYTHONPATH
 
       - name: Lint with flake8
         run: |
@@ -61,5 +61,7 @@ jobs:
           echo "    ignore::PendingDeprecationWarning" >> pytest.ini
 
       - name: Run tests
+        env:
+          PYTHONPATH: ${{ env.PYTHONPATH }}
         run: |
           pytest --maxfail=5 --disable-warnings
