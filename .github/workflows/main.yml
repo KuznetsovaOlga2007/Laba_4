@@ -44,7 +44,7 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 calculate.py circle.py square.py triangle.py testFolder/
+          flake8 calculate.py circle.py square.py triangle.py tests/
 
       - name: Run tests with pytest
         run: |
