@@ -56,11 +56,11 @@ if __name__ == "__main__":
     size = []
 
     # Запрос имени фигуры у пользователя
-    while fig not in figs: 
+    while fig not in figs:
         fig = input(f"Enter figure name, available are {figs}:\n")
 
     # Запрос имени функции у пользователя
-    while func not in funcs: 
+    while func not in funcs:
         func = input(f"Enter function name, available are {funcs}:\n")
 
     # Запрос параметров фигуры у пользователя
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 map(
                     int,
                     input(
-                        "Input\n"
+                        "\n"
                     ).split()
                 )
             )
