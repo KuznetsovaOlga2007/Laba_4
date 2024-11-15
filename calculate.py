@@ -29,7 +29,7 @@ def calc(fig: str, func: str, size: list) -> float:
 
     Параметры:
     fig (str): название фигуры (например, 'circle' или 'square').
-    func (str): название функции для расчета ('perimeter' или 'area').
+    func (str): название функции для расчета ('perimeter').
     size (list): список параметров фигуры ( радиус для круга).
 
     Возвращаемое значение:
@@ -56,11 +56,11 @@ if __name__ == "__main__":
     size = []
 
     # Запрос имени фигуры у пользователя
-    while fig not in figs:
+    while fig not in figs: 
         fig = input(f"Enter figure name, available are {figs}:\n")
 
     # Запрос имени функции у пользователя
-    while func not in funcs:
+    while func not in funcs: 
         func = input(f"Enter function name, available are {funcs}:\n")
 
     # Запрос параметров фигуры у пользователя
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 map(
                     int,
                     input(
-                        "Input figure sizes separated by space\n"
+                        "Input figure sizes by space\n"
                     ).split()
                 )
             )
