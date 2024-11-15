@@ -1,6 +1,5 @@
 import pytest
 from calculate import calc
-import math
 
 
 class TestCalc:
