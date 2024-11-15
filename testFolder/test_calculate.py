@@ -44,7 +44,7 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, f"Expected {expected}, got {result}"
 
     def test_calc_area_square(self):
         # Arrange
@@ -70,7 +70,7 @@ class TestCalc:
         result = calc(fig, func, size)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, f"Expected  {expected}, got {result}"
 
     def test_calc_area_triangle(self):
         # Arrange
