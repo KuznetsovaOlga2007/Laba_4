@@ -1,7 +1,7 @@
 import sys
 import os
 import pytest
-from geometric_lib.calculate import calc
+from ..geometric_lib.calculate import calc
 
 
 project_root = os.path.abspath(
