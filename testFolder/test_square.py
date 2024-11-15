@@ -1,7 +1,6 @@
-# tests/test_square.py
-
 import pytest
 from square import area, perimeter
+
 
 class TestSquare:
     def test_square_area_positive_side(self):
