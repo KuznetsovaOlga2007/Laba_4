@@ -14,9 +14,7 @@ class TestTriangle:
         result = area(a, b, c)
 
         # Assert
-        assert math.isclose(result, expected), (
-            f"Expected area {expected}, got {result}"
-        )
+        assert math.isclose(result, expected), f"Expected area {expected}, got {result}"
 
     def test_perimeter(self):
         # Arrange
@@ -27,9 +25,7 @@ class TestTriangle:
         result = perimeter(a, b, c)
 
         # Assert
-        assert result == expected, (
-            f"Expected perimeter {expected}, got {result}"
-        )
+        assert result == expected, f"Expected perimeter {expected}, got {result}"
 
     def test_negative_side_area(self):
         # Arrange

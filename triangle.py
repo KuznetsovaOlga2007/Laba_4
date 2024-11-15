@@ -19,9 +19,7 @@ def area(a: float, b: float, c: float) -> float:
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("All sides must be positive.")
     if (a + b <= c) or (a + c <= b) or (b + c <= a):
-        raise ValueError(
-            "The sum of any two sides bad."
-        )
+        raise ValueError("The sum of any two sides bad.")
     s = (a + b + c) / 2
     return math.sqrt(s * (s - a) * (s - b) * (s - c))
 
@@ -44,7 +42,5 @@ def perimeter(a: float, b: float, c: float) -> float:
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("All sides must be positive.")
     if (a + b <= c) or (a + c <= b) or (b + c <= a):
-        raise ValueError(
-            "The sum two sides must  third side."
-        )
+        raise ValueError("The sum two sides must  third side.")
     return a + b + c

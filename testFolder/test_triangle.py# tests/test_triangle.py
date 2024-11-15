@@ -4,6 +4,7 @@ import pytest
 import math
 from triangle import area, perimeter
 
+
 class TestTriangle:
     def test_area(self):
         # Arrange

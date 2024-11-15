@@ -3,24 +3,16 @@ import square
 import triangle  # Импорт модуля треугольника
 
 # Список доступных фигур
-figs = ['circle', 'square', 'triangle']
+figs = ["circle", "square", "triangle"]
 
 # Список доступных функций для расчета
-funcs = ['perimeter', 'area']
+funcs = ["perimeter", "area"]
 
 # Словарь для хранения размеров фигур
-sizes = {
-    'circle': 1,
-    'square': 1,
-    'triangle': 3
-}
+sizes = {"circle": 1, "square": 1, "triangle": 3}
 
 # Mapping figure names to their respective modules
-fig_modules = {
-    'circle': circle,
-    'square': square,
-    'triangle': triangle
-}
+fig_modules = {"circle": circle, "square": square, "triangle": triangle}
 
 
 def calc(fig: str, func: str, size: list) -> float:
@@ -46,13 +38,13 @@ def calc(fig: str, func: str, size: list) -> float:
     module = fig_modules[fig]
     func_to_call = getattr(module, func)
     result = func_to_call(*size)
-    print(f'{func} of {fig} is {result}')
+    print(f"{func} of {fig} is {result}")
     return result
 
 
 if __name__ == "__main__":
-    func = ''
-    fig = ''
+    func = ""
+    fig = ""
     size = []
 
     # Запрос имени фигуры у пользователя
@@ -66,12 +58,7 @@ if __name__ == "__main__":
     # Запрос параметров фигуры у пользователя
     while len(size) != sizes.get(fig, 1):
         try:
-            size = list(
-                map(
-                    int,
-                    input("\n").split()
-                )
-            )
+            size = list(map(int, input("\n").split()))
         except ValueError:
             print("Please enter valid integer values.")
 
