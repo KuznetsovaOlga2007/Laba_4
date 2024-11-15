@@ -1,9 +1,6 @@
 import unittest
 import math
 from Geometry import *
-# Импортируем функции из вашего файла, если они находятся в другом файле, например:
-# from your_module import areaCircle, perimeterCircle, areaTriangle, perimeterTriangle, areaSquare, perimeterSquare, areaRectangle, perimeterRectangle
-
 class TestGeometryFunctions(unittest.TestCase):
 
     def test_areaCircle(self):
