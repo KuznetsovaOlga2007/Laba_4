@@ -11,7 +11,7 @@ on:
       - master
       - release
       - develop
-  workflow_dispatch:  
+  workflow_dispatch:
 
 jobs:
   build:
@@ -45,12 +45,19 @@ jobs:
           pip install -r requirements.txt
 
       - name: Set PYTHONPATH
-        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV  # Устанавливаем текущую директорию как PYTHONPATH
+        run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
 
       - name: Lint with flake8
         run: |
           flake8 .  # Проверяем все файлы в корне репозитория
 
+      - name: Create pytest.ini for warnings
+        run: |
+          echo "[pytest]" > pytest.ini
+          echo "filterwarnings =" >> pytest.ini
+          echo "    ignore::DeprecationWarning" >> pytest.ini
+          echo "    ignore::PendingDeprecationWarning" >> pytest.ini
+
       - name: Run tests
         run: |
-          pytest
+          pytest --maxfail=5 --disable-warnings
