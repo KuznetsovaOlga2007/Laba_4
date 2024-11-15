@@ -1,8 +1,7 @@
-# tests/test_circle.py
-
 import pytest
 import math
 from circle import area, perimeter
+
 
 class TestCircle:
     def test_circle_area_positive_radius(self):
@@ -14,7 +13,7 @@ class TestCircle:
         result = area(radius)
 
         # Assert
-        assert result == expected, f"Expected area {expected}, got {result}"
+        assert result == pytest.approx(expected), f"Expected area {expected}, got {result}"
 
     def test_circle_perimeter_positive_radius(self):
         # Arrange
@@ -25,7 +24,7 @@ class TestCircle:
         result = perimeter(radius)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == pytest.approx(expected), f"Expected perimeter {expected}, got {result}"
 
     def test_circle_area_negative_radius(self):
         # Arrange
