@@ -1,6 +1,6 @@
 import circle
 import square
-import triangle  # Importing triangle module
+import triangle  # Импорт модуля треугольника
 
 # Список доступных фигур
 figs = ['circle', 'square', 'triangle']
@@ -28,12 +28,12 @@ def calc(fig: str, func: str, size: list) -> float:
     Вычисляет и выводит результат для заданной фигуры и функции.
 
     Параметры:
-    fig (str): название фигуры (например, 'circle' или 'square').
-    func (str): название функции для расчета ('perimeter').
-    size (list): список параметров фигуры ( радиус для круга).
+    fig (str): название фигуры (например, 'circle', 'square' или 'triangle').
+    func (str): название функции для расчета (например, 'perimeter' или 'area').
+    size (list): список параметров фигуры (например, радиус для круга).
 
     Возвращаемое значение:
-    float: результат расчета
+    float: результат расчета.
 
     Пример вызова:
     calc('circle', 'area', [5])
@@ -56,11 +56,11 @@ if __name__ == "__main__":
     size = []
 
     # Запрос имени фигуры у пользователя
-    while fig not in figs: 
+    while fig not in figs:
         fig = input(f"Enter figure name, available are {figs}:\n")
 
     # Запрос имени функции у пользователя
-    while func not in funcs: 
+    while func not in funcs:
         func = input(f"Enter function name, available are {funcs}:\n")
 
     # Запрос параметров фигуры у пользователя
@@ -70,7 +70,7 @@ if __name__ == "__main__":
                 map(
                     int,
                     input(
-                        "Input figure sizes by space\n"
+                        "Input\n"
                     ).split()
                 )
             )
