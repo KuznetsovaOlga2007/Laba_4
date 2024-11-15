@@ -1,14 +1,14 @@
-# tests/test_triangle.py
-
 import pytest
 import math
 from triangle import area, perimeter
+
 
 class TestTriangle:
     def test_area(self):
         # Arrange
         a, b, c = 3, 4, 5
-        expected = math.sqrt((6) * (6 - 3) * (6 - 4) * (6 - 5))  # s = 6
+        s = (a + b + c) / 2
+        expected = math.sqrt(s * (s - a) * (s - b) * (s - c))  # Heron's formula
 
         # Act
         result = area(a, b, c)
@@ -34,7 +34,7 @@ class TestTriangle:
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
             area(a, b, c)
-        assert "positive" in str(exc_info.value)
+        assert "must be positive" in str(exc_info.value)
 
     def test_negative_side_perimeter(self):
         # Arrange
@@ -43,11 +43,11 @@ class TestTriangle:
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
             perimeter(a, b, c)
-        assert "positive" in str(exc_info.value)
+        assert "must be positive" in str(exc_info.value)
 
     def test_invalid_sides_area(self):
         # Arrange
-        a, b, c = 1, 2, 3  # Не удовлетворяет неравенству треугольника
+        a, b, c = 1, 2, 3  # Does not satisfy triangle inequality
 
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
@@ -56,7 +56,7 @@ class TestTriangle:
 
     def test_invalid_sides_perimeter(self):
         # Arrange
-        a, b, c = 1, 2, 3  # Не удовлетворяет неравенству треугольника
+        a, b, c = 1, 2, 3  # Does not satisfy triangle inequality
 
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
