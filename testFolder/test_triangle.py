@@ -14,7 +14,9 @@ class TestTriangle:
         result = area(a, b, c)
 
         # Assert
-        assert math.isclose(result, expected), f"Expected area {expected}, got {result}"
+        assert math.isclose(result, expected), (
+            f"Expected area {expected}, got {result}"
+        )
 
     def test_perimeter(self):
         # Arrange
@@ -25,7 +27,9 @@ class TestTriangle:
         result = perimeter(a, b, c)
 
         # Assert
-        assert result == expected, f"Expected perimeter {expected}, got {result}"
+        assert result == expected, (
+            f"Expected perimeter {expected}, got {result}"
+        )
 
     def test_negative_side_area(self):
         # Arrange
@@ -47,7 +51,7 @@ class TestTriangle:
 
     def test_invalid_sides_area(self):
         # Arrange
-        a, b, c = 1, 2, 3  # Does not satisfy triangle inequality
+        a, b, c = 1, 2, 3  # Не удовлетворяет неравенству треугольника
 
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
@@ -56,7 +60,7 @@ class TestTriangle:
 
     def test_invalid_sides_perimeter(self):
         # Arrange
-        a, b, c = 1, 2, 3  # Does not satisfy triangle inequality
+        a, b, c = 1, 2, 3  # Не удовлетворяет неравенству треугольника
 
         # Act & Assert
         with pytest.raises(ValueError) as exc_info:
