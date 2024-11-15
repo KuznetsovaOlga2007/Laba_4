@@ -1,6 +1,6 @@
-
 import pytest
 from calculate import calc
+
 
 class TestCalc:
     def test_calc_invalid_figure(self):
