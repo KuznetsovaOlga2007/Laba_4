@@ -2,6 +2,7 @@ from circle import area as circle_area, perimeter as circle_perimeter
 from square import area as square_area, perimeter as square_perimeter
 from triangle import area as triangle_area, perimeter as triangle_perimeter
 
+
 figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
 
@@ -20,6 +21,7 @@ sizes = {
     'triangle-perimeter': 3
 }
 
+
 def calc(fig, func, size):
     assert fig in figs, f"Unknown figure: {fig}"
     assert func in funcs, f"Unknown function: {func}"
@@ -27,8 +29,8 @@ def calc(fig, func, size):
     key = f'{fig}-{func}'
     assert len(size) == sizes[key], f"Invalid size for {fig} {func}"
 
-    # Распаковка аргументов для функций с несколькими параметрами
     return figures[fig][func](*size)
+
 
 if __name__ == "__main__":
     func = ''
