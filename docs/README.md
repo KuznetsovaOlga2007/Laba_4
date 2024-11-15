@@ -83,7 +83,9 @@ def perimeter() принимает переменную **a** - *сторона 
 > def test_areaCircle(self)
 ## Тесты с неккоректными входными данными
 > def test_areaCircle_string(self)
+> 
 > def test_areaCircle_negative(self)
+> 
 > def test_areaCircle_zero(self)
 ## История измения проекта
 
