@@ -1,0 +1,67 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - main
+      - master
+      - release
+      - develop
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      FULL_NAME: "Салов Никита Ильич"
+      GROUP_NUMBER: "M3114"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: List repository contents for debugging
+        run: ls -R
+
+      - name: Display user information
+        run: |
+          echo "ФИО: $FULL_NAME"
+          echo "Номер группы: $GROUP_NUMBER"
+          echo "Ник на GitHub: ${{ github.actor }}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Set PYTHONPATH
+        run: |
+          echo "PYTHONPATH=$(pwd):$(pwd)/geometric_lib" >> $GITHUB_ENV
+          export PYTHONPATH=$(pwd):$(pwd)/geometric_lib  # Устанавливаем текущую директорию и geometric_lib в PYTHONPATH
+
+      - name: Lint with flake8
+        run: |
+          flake8 .  # Проверяем все файлы в корне репозитория
+
+      - name: Create pytest.ini for warnings
+        run: |
+          echo "[pytest]" > pytest.ini
+          echo "filterwarnings =" >> pytest.ini
+          echo "    ignore::DeprecationWarning" >> pytest.ini
+          echo "    ignore::PendingDeprecationWarning" >> pytest.ini
+
+      - name: Run tests
+        env:
+          PYTHONPATH: ${{ env.PYTHONPATH }}
+        run: |
+          pytest --maxfail=5 --disable-warnings
