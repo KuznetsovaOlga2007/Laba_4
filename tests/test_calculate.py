@@ -59,16 +59,16 @@ def test_invalid_function():
 def test_invalid_size_circle():
     with pytest.raises(AssertionError, match=(
         "Invalid number of parameters for area of circle")):
-        calc('circle', 'area', [5, 52])
+            calc('circle', 'area', [5, 52])
 
 
 def test_invalid_size_triangle():
     with pytest.raises(AssertionError, match=(
         "Invalid number of parameters for area of triangle")):
-        calc('triangle', 'area', [1, 52])
+            calc('triangle', 'area', [1, 52])
 
 
 def test_invalid_size_square():
     with pytest.raises(AssertionError, match=(
         "Invalid number of parameters for area of circle")):
-        calc('circle', 'area', [3, 52])
+            calc('circle', 'area', [3, 52])
