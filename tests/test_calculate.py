@@ -1,11 +1,12 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 import pytest
-#from circle import area, perimeter
-#from square import area, perimeter
-#from triangle import area, perimeter
 from calculate import calc, circle, square, triangle
+
+
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
 
 
 def test_circle_area():
@@ -56,19 +57,15 @@ def test_invalid_function():
 
 
 def test_invalid_size_circle():
-    with pytest.raises(AssertionError, match="Invalid number \
-    of parameters"):
+    with pytest.raises(AssertionError, match="Invalid number of parameters"):
         calc('circle', 'area', [5, 52])
 
 
 def test_invalid_size_triangle():
-    with pytest.raises(AssertionError, match="Invalid number \
-    of parameters"):
+    with pytest.raises(AssertionError, match="Invalid number of parameters"):
         calc('triangle', 'area', [1, 52])
 
 
 def test_invalid_size_square():
-    with pytest.raises(AssertionError, match="Invalid number \
-    of parameters"):
+    with pytest.raises(AssertionError, match="Invalid number of parameters"):
         calc('circle', 'area', [3, 52])
-        
