@@ -17,14 +17,22 @@ jobs:
   build:
     runs-on: ubuntu-latest
 
+    env:
+      FULL_NAME: "Чеботарёва Яна Александровна"
+      GROUP_NUMBER: "М3114"
+      GITHUB_USERNAME: ${{ github.actor }}
+      
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: List repository contents for debugging
+      run: ls -R
+        
     - name: Output user information
       run: |
-        echo "Full Name: Чеботарёва Яна Александровна"
-        echo "Group Number: М3114"
+        echo "Full Name: $FULL_NAME"
+        echo "$GROUP_NUMBER"
         echo "GitHub Username: ${{ github.actor }}"
 
     - name: Set up Python 3.13
