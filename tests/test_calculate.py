@@ -1,11 +1,11 @@
 import sys
 import os
 import pytest
-from calculate import calc, circle, square, triangle
+from ..calculate import calc, circle, square, triangle
 
 
-sys.path.insert(
-    0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.append(
+    os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 )
 
 
