@@ -4,7 +4,10 @@ import unittest
 from triangle import area, perimeter
 
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+sys.path.insert(
+    0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+)
+
 
 class TestTriangle(unittest.TestCase):
 
@@ -29,6 +32,7 @@ class TestTriangle(unittest.TestCase):
     def test_invalid_size_perimeter(self):
         with self.assertRaises(TypeError):
             perimeter(3, 4)
+
 
 if __name__ == '__main__':
     unittest.main()
