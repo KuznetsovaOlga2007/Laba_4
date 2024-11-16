@@ -35,6 +35,9 @@ jobs:
         echo "$GROUP_NUMBER"
         echo "GitHub Username: ${{ github.actor }}"
 
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+
     - name: Set up Python 3.10
       uses: actions/setup-python@v2
       with:
