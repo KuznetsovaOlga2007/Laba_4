@@ -8,6 +8,7 @@ sys.path.insert(
     0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
 )
 
+
 def test_area():
     result = area(3)
     expected_result = 3 ** 2
