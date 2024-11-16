@@ -3,7 +3,7 @@ import os
 import unittest
 from triangle import area, perimeter
 
-# Убедитесь, что отступы правильные
+
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 class TestTriangle(unittest.TestCase):
