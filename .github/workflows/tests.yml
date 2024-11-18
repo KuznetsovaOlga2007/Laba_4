@@ -13,8 +13,44 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-python@v5
+      - name: Install python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.13'
+    
+      
+      - name: Run square test
+        run: python -m unittest test_square.py
 
-      - run: python -m unittest test_circle.py
+      - name: Run rectangle test
+        run: python -m unittest test_rectangle.py
+
+      - name: Run triangle test
+        run: python -m unittest test_trianlge.py
+
+      - name: Run circle test
+        run: python -m unittest test_circle.py
+
+  test-windows:
+    runs-on: windows-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+    
+      
+      - name: Run square test
+        run: python -m unittest test_square.py
+
+      - name: Run rectangle test
+        run: python -m unittest test_rectangle.py
+
+      - name: Run triangle test
+        run: python -m unittest test_trianlge.py
+
+      - name: Run circle test
+        run: python -m unittest test_circle.py
