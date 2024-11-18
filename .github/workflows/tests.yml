@@ -50,7 +50,7 @@ jobs:
         run: python -m unittest test_rectangle.py
 
       - name: Run triangle test
-        run: python -m unittest test_trianlge.py
+        run: python -m unittest test_triangle.py
 
       - name: Run circle test
         run: python -m unittest test_circle.py

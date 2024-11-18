@@ -73,6 +73,8 @@ ___
 `python -m unittest <name file>`
 
 # History of work
+- [[d80116](https://github.com/itmo-coder/geometric_lib_fork/commit/d8011695c5ec0061fb839ac5766b73b422fece4c)] add: automatic tests with github actions
+
 - [[0499e7](https://github.com/itmo-coder/geometric_lib_fork/commit/0499e7af98f1d5373eb746417c1b1d95986eb602)] add: docs for unit tests in this library
 
 - [[24e3fca](https://github.com/itmo-coder/geometric_lib_fork/commit/24e3fcafd3cf951e431bc7c93831a6cb9866bdbd)] add: unit test for all functions
