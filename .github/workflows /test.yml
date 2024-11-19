@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FULL_NAME: "Мухин Вячеслав Дмитриевич"
-      GROUP_NUMBER: "М3117"
+      GROUP_NUMBER: "М 3117"
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
