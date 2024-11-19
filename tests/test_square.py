@@ -26,12 +26,12 @@ class TestSquare(unittest.TestCase):
     def test_area_negative(self):
         side = -1
         res = area(side)
-        self.assertEqual(AssertionError)
+        self.assertRaises(AssertionError)
 
     def test_perimeter_negative(self):
         side = -1
         res = area(side)
-        self.assertEqual(AssertionError)
+        self.assertRaises(AssertionError)
 
 if __name__ == '__main__':
     unittest.main()

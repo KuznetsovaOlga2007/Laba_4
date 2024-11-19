@@ -50,49 +50,49 @@ class TestCalculate(unittest.TestCase):
         fig = 'rectangle'
         func = 'area'
         size = [1]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
     def test_wrong_func(self): ###
         fig = 'Circle'
         func = 'diagonal'
         size = [1]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
     def test_wrong_size(self): ###
         fig = 'square'
         func = 'area'
         size = [1,2]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
     def test_neg_size_circle(self):
         fig = 'circle'
         func = 'area'
         size = [-1]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
     def test_neg_size_square(self):
         fig = 'square'
         func = 'area'
         size = [-1]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
     def test_neg_size_triangle(self):
         fig = 'square'
         func = 'area'
         size = [-5,-12,-13]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig, func, size)
 
     def test_wrong_size_triangle(self):
         fig = 'triangle'
         func = 'area'
         size = [1,2,10]
-        with self.assertEqual(AssertionError):
+        with self.assertRaises(AssertionError):
             calculate(fig,func,size)
 
 if __name__ == '__main__':
