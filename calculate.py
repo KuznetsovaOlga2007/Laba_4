@@ -13,27 +13,15 @@ funcs = ['perimeter', 'area']
 sizes = {'circle': 1, 'square': 1}
 
 
-def calc(fig, func, size):
-    if fig not in figs:
-        raise ValueError(f"Invalid figure name '{fig}'. Expected one of {figs}.")
-
-    if func not in funcs:
-        raise ValueError(f"Invalid function '{func}'. Expected one of {funcs}.")
-
-    if not all(isinstance(s, (int, float)) and s > 0 for s in size):
-        raise ValueError("All size parameters must be positive numbers.")
-
-    if fig == "circle":
-        if func == "area":
-            return circle.area(*size)
-        elif func == "perimeter":
-            return circle.perimeter(*size)
-    elif fig == "square":
-        if func == "area":
-            return square.area(*size)
-        elif func == "perimeter":
-            return square.perimeter(*size)
-
+def calc(fig: str, func: str, size: list) -> float:
+    assert fig in figs, f"Figure '{fig}' is not supported."
+    assert func in funcs, f"Function '{func}' is not supported."
+    
+    if len(size) != sizes[fig]:
+        raise ValueError(f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}.")
+    
+    result = eval(f'{fig}.{func}(*{size})')
+    return result
 
 if __name__ == "__main__":
     func = ''
