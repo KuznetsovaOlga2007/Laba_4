@@ -1,2 +1,2 @@
-black==24.10.0
+flake8==5.0.4
 unittest2==1.1.0
