@@ -3,16 +3,14 @@ from triangle import area, perimeter
 import math
 
 
+import unittest
+from triangle import area, perimeter
+
 class TestTriangle(unittest.TestCase):
     # Тесты на корректные значения для площади
     def test_triangle_area(self):
-        # Arrange
         a, b, c = 3, 4, 5  # Прямоугольный треугольник
-
-        # Act
         result = area(a, b, c)
-
-        # Assert
         self.assertAlmostEqual(result, 6.0)
 
         # Arrange
