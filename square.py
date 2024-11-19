@@ -1,9 +1,9 @@
-def area(a):
-    if a < 0:
-        raise ValueError("Side length cannot be negative")
-    return a * a
+def area(side: float) -> float:
+    if side <= 0:
+        raise ValueError("Side length must be positive")
+    return side * side
 
-def perimeter(a):
-    if a < 0:
-        raise ValueError("Side length cannot be negative")
-    return 4 * a
+def perimeter(side: float) -> float:
+    if side <= 0:
+        raise ValueError("Side length must be positive")
+    return 4 * side
