@@ -7,17 +7,15 @@ funcs = ['perimeter', 'area']
 sizes = {'circle': 1, 'square': 1}  # Указываем, что для каждой фигуры нужен 1 параметр
 
 
-def calc(fig, func, size):
+def calc(fig: str, func: str, size: list) -> float:
     assert fig in figs, f"Figure '{fig}' is not supported."
     assert func in funcs, f"Function '{func}' is not supported."
-
+    
     if len(size) != sizes[fig]:
-        raise ValueError(f"Invalid number of arguments for {fig}. "
-                         f"Expected {sizes[fig]}, got {len(size)}.")
-
+        raise ValueError(f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}.")
+    
     result = eval(f'{fig}.{func}(*{size})')
     return result
-
 
 if __name__ == "__main__":
     func = ''
