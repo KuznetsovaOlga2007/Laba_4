@@ -2,19 +2,36 @@ import circle
 import square
 
 
-figs = ['circle', 'square']
+figs = ['circle', 'square','triangle']
 funcs = ['perimeter', 'area']
-sizes = {}
+sizes = {
+		'circle-area': 1,
+		'circle-perimeter': 1,
+		'square-area': 1,
+		'square-perimeter': 1,
+		'triangle-area': 3,
+		'triangle-perimeter': 3
+}
 
 def calc(fig, func, size):
 	'''Функция принимает в себя первым аргументом имя фигуры, вторым аргусентом - то значение,
-	которое функция должна получить у данной, третьим - размер, чтобы получить данное значение'''
+		которое функция должна получить у данной, третьим - размер, чтобы получить данное значение'''
 	assert fig in figs
 	assert func in funcs
 
-	result = eval(f'{fig}.{func}(*{size})')
-	print(f'{func} of {fig} is {result}')
+	key = f'{fig}-{func}'
+	args = sizes.get(key)
+	assert args is not None
+	assert len(size) == args
 
+	assert all(s >= 0 for s in size)
+
+	if fig == "triangle":
+		a,b,c = size
+		assert a + b > c and a + c > b and b + c > a
+
+	result = eval(f'{fig}.{func}(*{size})')
+	return result
 if __name__ == "__main__":
 	func = ''
 	fig = ''
