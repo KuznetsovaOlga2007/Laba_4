@@ -1,5 +1,6 @@
 import math
 
+
 def area(a, b, c):
     # Проверка сторон
     if a <= 0 or b <= 0 or c <= 0:
