@@ -42,5 +42,6 @@ jobs:
       - name: Check code style
         run: |
           python3 -m pip install --upgrade pip
-          pip install pylint
-          pylint .
+          pip install black
+          black .
+          black --check .          
