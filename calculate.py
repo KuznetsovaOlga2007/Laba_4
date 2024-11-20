@@ -8,24 +8,27 @@ import square
 Возвращаемое значение: площадь или периметр фигуры в виде числа.
 """
 
-figs = ['circle', 'square']
-funcs = ['perimeter', 'area']
-sizes = {'circle': 1, 'square': 1}
+figs = ["circle", "square"]
+funcs = ["perimeter", "area"]
+sizes = {"circle": 1, "square": 1}
 
 
 def calc(fig: str, func: str, size: list) -> float:
     assert fig in figs, f"Figure '{fig}' is not supported."
     assert func in funcs, f"Function '{func}' is not supported."
-    
+
     if len(size) != sizes[fig]:
-        raise ValueError(f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}.")
-    
-    result = eval(f'{fig}.{func}(*{size})')
+        raise ValueError(
+            f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}."
+        )
+
+    result = eval(f"{fig}.{func}(*{size})")
     return result
 
+
 if __name__ == "__main__":
-    func = ''
-    fig = ''
+    func = ""
+    fig = ""
     size = []
 
     while fig not in figs:
@@ -36,7 +39,14 @@ if __name__ == "__main__":
 
     while len(size) != sizes.get(fig, 1):
         try:
-            size = list(map(float, input(f"Input {sizes[fig]} size(s) for {fig} separated by space:\n").split()))
+            size = list(
+                map(
+                    float,
+                    input(
+                        f"Input {sizes[fig]} size(s) for {fig} separated by space:\n"
+                    ).split(),
+                )
+            )
         except ValueError:
             print("Invalid input. Please enter numbers only.")
 
