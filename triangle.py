@@ -1,19 +1,21 @@
-def area(a: float, b: float, c: float) -> float:
-    # Проверка на отрицательные или нулевые длины сторон
+import math
+
+def area(a, b, c):
+    # Проверка сторон
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("Side lengths must be positive numbers")
-    # Проверка, чтобы стороны могли образовать треугольник
     if a + b <= c or a + c <= b or b + c <= a:
         raise ValueError("The provided sides do not form a triangle")
 
-    return (a + b + c) / 2
+    # Формула Герона
+    s = (a + b + c) / 2
+    return math.sqrt(s * (s - a) * (s - b) * (s - c))
 
 
-def perimeter(a: float, b: float, c: float) -> float:
-    # Проверка на отрицательные или нулевые длины сторон
+def perimeter(a, b, c):
+    # Проверка сторон
     if a <= 0 or b <= 0 or c <= 0:
         raise ValueError("Side lengths must be positive numbers")
-    # Проверка, чтобы стороны могли образовать треугольник
     if a + b <= c or a + c <= b or b + c <= a:
         raise ValueError("The provided sides do not form a triangle")
 
