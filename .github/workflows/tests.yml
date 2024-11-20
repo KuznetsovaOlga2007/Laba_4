@@ -12,9 +12,27 @@ on:
       - develop
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+  stage1_check-formatting:
+  name: Code formatting check
+  runs-on: ubuntu-latest
+  
+  steps:
+   - name: Install flake8 and black
+      run: |
+        pip install flake8 black
 
+    - name: Lint code with flake8
+      run: |
+        flake8 .
+
+    - name: Format code with black
+      run: |
+        black . --check --diff
+
+    stage2_buildtest:
+    name: Testing
+    runs-on: ubuntu-latest
+    
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
@@ -39,15 +57,5 @@ jobs:
       run: |
         python -m unittest discover -s tests
         
-    - name: Install flake8 and black
-      run: |
-        pip install flake8 black
-
-    - name: Lint code with flake8
-      run: |
-        flake8 .
-
-    - name: Format code with black
-      run: |
-        black . --check --diff
+   
   
