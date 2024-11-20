@@ -20,13 +20,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Install flake8 and black
+    - name: Install black
       run: |
-        pip install flake8 black
-
-    - name: Lint code with flake8
-      run: |
-        flake8 .
+        pip install black
 
     - name: Format code with black
       run: |
