@@ -1,0 +1,45 @@
+name: CI Workflow
+
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - master
+      - release
+      - develop
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      FULL_NAME: "Ваше ФИО"
+      GROUP_NUMBER: "Ваша группа"
+
+    steps:
+      - name: Output personal information
+        run: |
+          echo "ФИО: ${{ env.FULL_NAME }}"
+          echo "Номер группы: ${{ env.GROUP_NUMBER }}"
+          echo "Ник на GitHub: ${{ github.actor }}"
+
+      - name: Set up Python 3.13
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests
+        run: |
+          python -m unittest discover
+
+      - name: Check code style
+        run: |
+          flake8 .
