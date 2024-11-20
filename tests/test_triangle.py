@@ -6,6 +6,7 @@ import math
 import unittest
 from triangle import area, perimeter
 
+
 class TestTriangle(unittest.TestCase):
     # Тесты на корректные значения для площади
     def test_triangle_area(self):
@@ -87,5 +88,5 @@ class TestTriangle(unittest.TestCase):
             perimeter(a, b, c)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()
