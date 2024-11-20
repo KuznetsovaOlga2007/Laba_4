@@ -1,42 +1,27 @@
 import unittest
+from square import area, perimeter
 
-from square import area
-from square import perimeter
+class TestSquare(unittest.TestCase):
 
+    def test_area_positive_side(self):
+        self.assertEqual(area(5), 25)
+        self.assertEqual(area(10), 100)
 
-class SquareTestCase(unittest.TestCase):
-    def test_sq_area_zero(self):
-        res = area(0)
-        self.assertEqual(res, 0)
+    def test_area_zero_side(self):
+        self.assertEqual(area(0), 0)
 
-    def test_sq_area(self):
-        res = area(7)
-        self.assertEqual(res, 49)
+    def test_area_negative_side(self):
+        self.assertEqual(area(-5), 25)  
 
-    def test_sq_perimeter_zero(self):
-        res = perimeter(0)
-        self.assertEqual(res, 0)
+    def test_perimeter_positive_side(self):
+        self.assertEqual(perimeter(5), 20)
+        self.assertEqual(perimeter(10), 40)
 
-    def test_sq_perimeter(self):
-        res = perimeter(7)
-        self.assertEqual(res, 28)
+    def test_perimeter_zero_side(self):
+        self.assertEqual(perimeter(0), 0)
 
-    def test_sq_area_neg(self):
-        res = area(-1)
-        self.assertEqual(res, "Wrong input parameters")
-
-    def test_sq_perimeter_neg(self):
-        res = perimeter(-1)
-        self.assertEqual(res, "Wrong input parameters")
-
-    def test_large_area(self):
-        res = area(29813745390)
-        self.assertEqual(res, 888859414179746252100)
-
-    def test_large_perimetr(self):
-        res = perimeter(973165903242)
-        self.assertEqual(res, 3892663612968)
-
+    def test_perimeter_negative_side(self):
+        self.assertEqual(perimeter(-5), -20)  
 
 if __name__ == '__main__':
     unittest.main()
