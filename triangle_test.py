@@ -46,7 +46,7 @@ class TriangleTestCase(unittest.TestCase):
     def test_double_equal_existence(self):
         res = triangle.perimeter(5, 5, 10)
 
-        self.assertNotEqual(res, 20)
+        self.assertEqual(res, -1)
 
     def test_diff_sum(self):
         res1 = triangle.perimeter(3, 4, 5)
@@ -60,4 +60,4 @@ class TriangleTestCase(unittest.TestCase):
     def test_diff_existence(self):
         res = triangle.perimeter(5, 10, 15)
 
-        self.assertNotEqual(res, 30)
+        self.assertEqual(res, -1)

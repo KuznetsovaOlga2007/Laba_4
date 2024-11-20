@@ -9,7 +9,7 @@ class CircleTestCase(unittest.TestCase):
 
         self.assertEqual(res, 0)
 
-    def test_square_mul(self):
+    def test_mul(self):
         res = circle.area(10)
 
         self.assertEqual(res, math.pi * 100)
@@ -19,7 +19,7 @@ class CircleTestCase(unittest.TestCase):
 
         self.assertEqual(res, 0)
 
-    def test_square_sum(self):
+    def test_sum(self):
         res = circle.perimeter(10)
 
         self.assertEqual(res, math.pi * 20)
