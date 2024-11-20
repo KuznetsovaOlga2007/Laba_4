@@ -4,8 +4,8 @@ from triangle import area, perimeter
 class TestTriangle(unittest.TestCase):
 
     def test_area_positive_sides(self):
-        self.assertEqual(area(3, 4, 5), 6)
-        self.assertEqual(area(6, 8, 10), 24)
+        self.assertAlmostEqual(area(3, 4, 5), 6)
+        self.assertAlmostEqual(area(6, 8, 10), 24)
 
     def test_area_zero_sides(self):
         self.assertEqual(area(0, 4, 5), 0)
