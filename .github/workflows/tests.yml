@@ -38,5 +38,16 @@ jobs:
     - name: Run unit tests
       run: |
         python -m unittest discover -s tests
+        
+    - name: Install flake8 and black
+      run: |
+        pip install flake8 black
 
+    - name: Lint code with flake8
+      run: |
+        flake8 .
+
+    - name: Format code with black
+      run: |
+        black . --check --diff
   
