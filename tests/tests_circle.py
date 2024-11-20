@@ -12,7 +12,8 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(area(0), 0)
 
     def test_area_negative_radius(self):
-        self.assertAlmostEqual(area(-5), math.pi * 5 * 5) 
+        with self.assertRaises(ValueError):
+            area(-5)
 
     def test_perimeter_positive_radius(self):
         self.assertAlmostEqual(perimeter(5), 2 * math.pi * 5)
@@ -22,7 +23,8 @@ class TestCircle(unittest.TestCase):
         self.assertEqual(perimeter(0), 0)
 
     def test_perimeter_negative_radius(self):
-        self.assertAlmostEqual(perimeter(-5), 2 * math.pi * 5)  
+        with self.assertRaises(ValueError):
+            perimeter(-5)
 
 if __name__ == '__main__':
     unittest.main()
