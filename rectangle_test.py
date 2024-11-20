@@ -8,7 +8,7 @@ class RectangleTestCase(unittest.TestCase):
         res2 = rectangle.area(0, 10)
         res3 = rectangle.area(0, 0)
 
-        self.assertEqual(res1, 0)
+        self.assertEqual(res1, -1)
         self.assertEqual(res1, res2)
         self.assertEqual(res1, res3)
 
@@ -25,9 +25,13 @@ class RectangleTestCase(unittest.TestCase):
         self.assertEqual(res1, res2)
 
     def test_zero_sum(self):
-        res = rectangle.perimeter(0, 0)
+        res1 = rectangle.perimeter(0, 0)
+        res2 = rectangle.perimeter(0, 10)
+        res3 = rectangle.perimeter(10, 0)
 
-        self.assertEqual(res, 0)
+        self.assertEqual(res1, -1)
+        self.assertEqual(res1, res2)
+        self.assertEqual(res1, res3)
 
     def test_square_sum(self):
         res = rectangle.perimeter(10, 10)

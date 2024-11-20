@@ -8,7 +8,7 @@ class TriangleTestCase(unittest.TestCase):
         res2 = triangle.area(0, 10)
         res3 = triangle.area(0, 0)
 
-        self.assertEqual(res1, 0)
+        self.assertEqual(res1, -1)
         self.assertEqual(res1, res2)
         self.assertEqual(res1, res3)
 
@@ -25,9 +25,13 @@ class TriangleTestCase(unittest.TestCase):
         self.assertEqual(res1, res2)
 
     def test_zero_sum(self):
-        res = triangle.perimeter(0, 0, 0)
+        res1 = triangle.perimeter(0, 0, 0)
+        res2 = triangle.perimeter(10, 0, 0)
+        res3 = triangle.perimeter(10, 10, 0)
 
-        self.assertEqual(res, 0)
+        self.assertEqual(res1, -1)
+        self.assertEqual(res1, res2)
+        self.assertEqual(res1, res3)
 
     def test_triple_equal_sum(self):
         res = triangle.perimeter(10, 10, 10)

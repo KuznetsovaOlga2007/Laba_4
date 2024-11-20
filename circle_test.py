@@ -7,7 +7,7 @@ class CircleTestCase(unittest.TestCase):
     def test_zero_mul(self):
         res = circle.area(0)
 
-        self.assertEqual(res, 0)
+        self.assertEqual(res, -1)
 
     def test_mul(self):
         res = circle.area(10)
@@ -17,7 +17,7 @@ class CircleTestCase(unittest.TestCase):
     def test_zero_sum(self):
         res = circle.perimeter(0)
 
-        self.assertEqual(res, 0)
+        self.assertEqual(res, -1)
 
     def test_sum(self):
         res = circle.perimeter(10)
