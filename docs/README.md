@@ -247,3 +247,12 @@ print(perimeter(1.7, 5.2, 3.8)) # 10.7
 - `409c027e27f28c61fb3cc77712d493c6aaa4389e` comments on functions in triangle.py added
 - `ca696325bf3e7da45e5a472852cf5895e9d405dc` minor cosmetic changes on rectangle.py and triangle.py
 - `0beff003d049cd59c6a45e07de318c9566711425 (HEAD -> new_features_465546)` documentation added in readme file
+- `9d946af9622d22d556abab3ba3271d66fca784a1 (origin/new_features_465546)` history of commits added to documentation
+- `f4d472154f71ca5de9c701133eac40b08ec960fe` new test file on rectangle added
+- `a2f09b71b95ad38b0df4f582488d29e49cb1b5d6` new test file on square added
+- `af2413edd87d3a24d1e1db2887bc928addd5952d` new test file on circle added
+- `56f26be13976cb315213ea3e37e4c606748f23aa` new test file on triangle added
+- `8fce1a2681f46b443d5d240b9db407f776d46892` checking of invalid figures added
+- `ec8005e23ca46c0435bf42687d5ad44562657829` all tests on invalid figures changed
+- `c5c90eb213638da0eea85877ec48f8cef74e516c` information on tests added into readme
+- `91ce5245de6f731709caf643cae2ce655375f528 (HEAD -> new_features_465546)` tests description added into readme
