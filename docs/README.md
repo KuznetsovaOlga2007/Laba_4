@@ -166,6 +166,44 @@ print(perimeter(5, 6, 7))       # 18
 print(perimeter(3, 2.4, 4))     # 9.4
 print(perimeter(1.7, 5.2, 3.8)) # 10.7
 ```
+## **Тестирование**
+В проект добавлена папка `tests` с файлами unit-тестов продукта.
+### **Файл _rectangle_test.py_**
+`RectangleTestCase`
+
+Включает 6 тестов для модуля `rectangle`.
+
+**Результаты тестов:**
+
+![tableheaders](../images/tableheaders.png)
+![rectangletestcase](../images/rectangletest.png)
+### **Файл _square_test.py_**
+`SquareTestCase`
+
+Включает 6 тестов для модуля `square`.
+
+**Результаты тестов:**
+
+![tableheaders](../images/tableheaders.png)
+![squaretestcase](../images/squaretest.png)
+### **Файл _circle_test.py_**
+`CircleTestCase`
+
+Включает 6 тестов для модуля `circle`.
+
+**Результаты тестов:**
+
+![tableheaders](../images/tableheaders.png)
+![circletestcase](../images/circletest.png)
+### **Файл _triangle_test.py_**
+`TriangleTestCase`
+
+Включает 6 тестов для модуля `triangle`.
+
+**Результаты тестов:**
+
+![tableheaders](../images/tableheaders.png)
+![triangletestcase](../images/triangletest.png)
 ## **История изменения проекта с хэшами коммитов**
 
 - `8ba9aeb3cea847b63a91ac378a2a6db758682460` L-03: Circle and square added
