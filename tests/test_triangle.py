@@ -6,7 +6,7 @@ class TestTriangle(unittest.TestCase):
     def test_triangle_area(self):
         # Arrange
         a, b, c = 5, 6, 7  # Стороны треугольника
-        expected_area = 16.24807680927192  # Ручной расчет или известный результат
+        expected_area = 14.696938456699069  # Ручной расчет или известный результат
 
         # Act
         result = area(a, b, c)
