@@ -42,5 +42,5 @@ jobs:
       - name: Check code style
         run: |
           python3 -m pip install --upgrade pip
-          pip install flake8
-          flake8 .
+          pip install pylint
+          pylint .
