@@ -1,6 +1,7 @@
 # Math formulas
 ## Area
 - Circle: S = πR²
+ Пример: если R = 5, то S = 3.14 × 5² = 78.5  
 - Rectangle: S = ab
 - Square: S = a²
 
