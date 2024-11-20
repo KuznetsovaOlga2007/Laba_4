@@ -43,5 +43,4 @@ jobs:
         run: |
           python3 -m pip install --upgrade pip
           pip install black
-          black .
-          black --diff .
+          black --check .
