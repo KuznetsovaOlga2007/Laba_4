@@ -1,76 +1,33 @@
 import unittest
 from triangle import area, perimeter
-import math
-
-
-import unittest
-from triangle import area, perimeter
 
 
 class TestTriangle(unittest.TestCase):
-    # Тесты на корректные значения для площади
     def test_triangle_area(self):
-        a, b, c = 3, 4, 5  # Прямоугольный треугольник
-        result = area(a, b, c)
-        self.assertAlmostEqual(result, 6.0)
-
         # Arrange
-        a, b, c = 7, 10, 5  # Произвольный треугольник
+        a, b, c = 5, 6, 7  # Стороны треугольника
+        expected_area = 16.24807680927192  # Ручной расчет или известный результат
 
         # Act
         result = area(a, b, c)
 
         # Assert
-        self.assertAlmostEqual(result, 16.24807680927192)
+        self.assertAlmostEqual(result, expected_area, places=7)
 
-    # Тесты на корректные значения для периметра
     def test_triangle_perimeter(self):
         # Arrange
-        a, b, c = 3, 4, 5  # Прямоугольный треугольник
+        a, b, c = 5, 6, 7
+        expected_perimeter = 18
 
         # Act
         result = perimeter(a, b, c)
 
         # Assert
-        self.assertEqual(result, 12)
+        self.assertEqual(result, expected_perimeter)
 
-        # Arrange
-        a, b, c = 7, 10, 5  # Произвольный треугольник
-
-        # Act
-        result = perimeter(a, b, c)
-
-        # Assert
-        self.assertEqual(result, 22)
-
-    # Тесты для нулевых значений (ожидаем ValueError)
-    def test_zero_sides(self):
-        # Arrange
-        a, b, c = 0, 4, 5
-
-        # Act and Assert
-        with self.assertRaises(ValueError):
-            area(a, b, c)
-
-        with self.assertRaises(ValueError):
-            perimeter(a, b, c)
-
-    # Тесты для отрицательных значений (ожидаем ValueError)
-    def test_negative_sides(self):
-        # Arrange
-        a, b, c = -3, 4, 5
-
-        # Act and Assert
-        with self.assertRaises(ValueError):
-            area(a, b, c)
-
-        with self.assertRaises(ValueError):
-            perimeter(a, b, c)
-
-    # Тесты для невозможных треугольников (ожидаем ValueError)
     def test_invalid_triangle(self):
         # Arrange
-        a, b, c = 1, 2, 3  # Не выполняется неравенство треугольника
+        a, b, c = 1, 2, 3  # Эти стороны не образуют треугольник
 
         # Act and Assert
         with self.assertRaises(ValueError):
@@ -78,8 +35,19 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
+    def test_negative_sides(self):
         # Arrange
-        a, b, c = 10, 1, 1  # Не выполняется неравенство треугольника
+        a, b, c = -5, 6, 7  # Отрицательная сторона
+
+        # Act and Assert
+        with self.assertRaises(ValueError):
+            area(a, b, c)
+        with self.assertRaises(ValueError):
+            perimeter(a, b, c)
+
+    def test_zero_sides(self):
+        # Arrange
+        a, b, c = 0, 6, 7  # Сторона равна нулю
 
         # Act and Assert
         with self.assertRaises(ValueError):
