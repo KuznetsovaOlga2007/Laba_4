@@ -33,7 +33,7 @@ def calc(fig, func, size):
     return result
 
 
-if __name__ == "__main__":
+if name == "main":
     func = ""
     fig = ""
     size = []
