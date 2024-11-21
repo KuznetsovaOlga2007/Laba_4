@@ -1,0 +1,54 @@
+name: Geometric_lib_action_testing
+run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+on:
+  push:
+    branches:
+      - main
+      - release
+  pull_request:
+    branches:
+      - master
+      - release
+      - develop
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      FULL_NAME: "Шумилин Дмитрий Степанович"
+      GROUP_NUMBER: "M3116"
+
+    steps:
+    - name: Check out the code
+      uses: actions/checkout@v3
+
+    - name: Output user details
+      run: |
+        echo "ФИО: ${{ env.FULL_NAME }}"
+        echo "Номер группы: ${{ env.GROUP_NUMBER }}"
+        echo "GitHub Nickname: ${{ github.actor }}"
+
+    - name: Set up Python 3.13
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.13'
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run linter (flake8)
+      run: |
+        pip install flake8
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+
+    - name: Auto-format code with black
+      run: |
+        pip install black
+        black --check . || black .
+
+    - name: Run tests
+      run: |
+        pytest --disable-warnings -q
