@@ -1,10 +1,9 @@
 import unittest
 import math
 import sys
+from circle import area, perimeter
 
 sys.path.append("..")
-
-from circle import area, perimeter
 
 
 class CircleTestCase(unittest.TestCase):
