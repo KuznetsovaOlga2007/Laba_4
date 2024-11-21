@@ -1,11 +1,9 @@
 import unittest
 import math
 import sys
-
-sys.path.append("..")
-
 from triangle import area, perimeter
 
+sys.path.append("..")
 
 class TriangleTestCase(unittest.TestCase):
     def test_zero_sides(self):
