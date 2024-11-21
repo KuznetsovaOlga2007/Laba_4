@@ -1,9 +1,8 @@
 import unittest
 import sys
-
-sys.path.append("..")
 from square import area, perimeter
 
+sys.path.append("..")
 
 class SquareTestCase(unittest.TestCase):
     def test_zero_side(self):
