@@ -45,21 +45,21 @@ class TestCalculate(unittest.TestCase):
         res = calc(fig, func, size)
         self.assertEqual(res, 30)
 
-    def test_wrong_fig(self):  ###
+    def test_wrong_fig(self):
         fig = "rectangle"
         func = "area"
         size = [1]
         with self.assertRaises(AssertionError):
             calc(fig, func, size)
 
-    def test_wrong_func(self):  ###
+    def test_wrong_func(self):
         fig = "Circle"
         func = "diagonal"
         size = [1]
         with self.assertRaises(AssertionError):
             calc(fig, func, size)
 
-    def test_wrong_size(self):  ###
+    def test_wrong_size(self):
         fig = "square"
         func = "area"
         size = [1, 2]
