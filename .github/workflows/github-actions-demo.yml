@@ -1,31 +1,42 @@
-name: Full Workflow Example
-run-name: ${{ github.actor }} is testing out GitHub Actions
+name: Tests Workflow
 
 on:
   push:
     branches:
       - main
+      - release
   pull_request:
     branches:
       - main
+      - release
+      - develop
 
 jobs:
-  full-job:
+  test:
     runs-on: ubuntu-latest
-
     env:
-      FULL_NAME: "Lukashenko Kirill Denisovich"
+      FULL_NAME: "Lukashenko kirill Denisovich"
       GROUP_NUMBER: "M3117"
       NICKNAME_GITHUB: "JanartYho"
 
     steps:
-      - name: Вывод информации в консоль
-        run: |
-          echo 'ФИО: ${{ env.FULL_NAME }}'
-          echo 'Группа: ${{ env.GROUP_NUMBER }}'
-          echo 'GitHub Nick: ${{ github.actor }}'
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: Установка Python 3.13
+      - name: Print information
+        run: |
+          echo "Full Name: ${{ env.FULL_NAME }}"
+          echo "Group Name ${{ env.GROUP_NUMBER }}"
+          echo "Nickname Github: ${{ github.actor }}"
+      - name: Set up Python 3.13
         uses: actions/setup-python@v4
         with:
-          python-version: '3.13'
+          python-version: 3.13
+
+      - name: Run unit_tests
+        run: |
+          python -m unittest
+      - name: Lint code with flake8
+        run: |
+          pip install flake8
+          flake8 --ignore=F401 .
