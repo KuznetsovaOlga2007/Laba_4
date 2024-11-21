@@ -1,5 +1,4 @@
 import unittest
-import math
 import sys
 from triangle import area, perimeter
 
