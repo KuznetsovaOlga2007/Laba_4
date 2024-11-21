@@ -1,5 +1,3 @@
-from typing import assert_type
-
 import pytest
 
 import calculate
