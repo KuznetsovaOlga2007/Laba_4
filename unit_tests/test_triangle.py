@@ -5,6 +5,7 @@ from triangle import area, perimeter
 
 sys.path.append("..")
 
+
 class TriangleTestCase(unittest.TestCase):
     def test_zero_sides(self):
         a, b, c = 0, 0, 0
