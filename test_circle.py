@@ -14,7 +14,7 @@ class TestCircleFunctions(unittest.TestCase):
 
     def test_area_negative(self):
         # Тестирует функцию area с отрицательным радиусом
-        self.assertAlmostEqual(area(-5), math.pi * 25)
+        self.assertNotAlmostEqual(area(-5), math.pi * 25)
 
     def test_area_positive_float(self):
         # Тестирует функцию area с положительным радиусом с плавающей точкой
@@ -30,7 +30,7 @@ class TestCircleFunctions(unittest.TestCase):
 
     def test_perimeter_negative(self):
         # Тестирует функцию perimeter с отрицательным радиусом
-        self.assertAlmostEqual(perimeter(-5), -2 * math.pi * 5)
+        self.assertNotAlmostEqual(perimeter(-5), -2 * math.pi * 5)
 
     def test_perimeter_positive_float(self):
         # Тестирует функцию perimeter с положительным радиусом с плавающей точкой

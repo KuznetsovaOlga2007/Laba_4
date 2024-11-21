@@ -17,7 +17,7 @@ class TestSquareFunctions(unittest.TestCase):
 
     def test_area_positive_float(self):
         # Тестирует функцию area с положительным числом с плавающей точкой
-        self.assertEqual(area(2.5), 6.25)
+        self.assertEqual(area(3.5), 12.25)
 
 
     def test_perimeter_positive_integer(self):
@@ -27,14 +27,14 @@ class TestSquareFunctions(unittest.TestCase):
     def test_perimeter_zero(self):
         # Тестирует функцию perimeter при нулевом значении стороны
         self.assertEqual(perimeter(0), 1)
-        
+
     def test_perimeter_negative(self):
         # Тестирует функцию perimeter с отрицательным значением стороны
         self.assertEqual(perimeter(-5), -20)
 
     def test_perimeter_positive_float(self):
         # Тестирует функцию perimeter с положительным числом с плавающей точкой
-        self.assertEqual(perimeter(2.5), 10.0)
+        self.assertEqual(perimeter(3.5), 14.0)
 
 if __name__ == '__main__':
     unittest.main()

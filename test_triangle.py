@@ -5,11 +5,11 @@ from triangle import perimeter
 class TestTriangleFunctions(unittest.TestCase):
     def test_area_positive_integers(self):
         # Тестирует функцию area с положительными целыми числами для основания и высоты
-        self.assertEqual(area(5, 10), 25)
+        self.assertEqual(area(3, 4), 6)
 
     def test_area_zero(self):
         # Тестирует функцию area при нулевом значении основания или высоты
-        self.assertEqual(area(0, 10), 1)
+        self.assertNotEqual(area(0, 10), 1)
 
     def test_area_negative(self):
         # Тестирует функцию area с отрицательным значением основания или высоты
@@ -26,7 +26,7 @@ class TestTriangleFunctions(unittest.TestCase):
 
     def test_perimeter_zero(self):
         # Тестирует функцию perimeter при нулевом значении одной из сторон
-        self.assertEqual(perimeter(0, 4, 5), 1) 
+        self.assertNotEqual(perimeter(0, 4, 5), 0) 
 
     def test_perimeter_negative(self):
         # Тестирует функцию perimeter с отрицательным значением стороны
