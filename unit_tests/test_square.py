@@ -25,10 +25,10 @@ class SquareTestCase(unittest.TestCase):
     def test_negative_side(self):
         side = -1
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             area(side)
 
-        with self.assertRaises(TypeError):
+        with self.assertRaises(ValueError):
             perimeter(side)
 
 
