@@ -1,8 +1,9 @@
 import circle
 import square
+import triangle  # Подключаем модуль для треугольника
 
 # Список доступных фигур и функций
-figs = ['circle', 'square']
+figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
 
 # Словарь с функциями для расчёта
@@ -14,6 +15,10 @@ figure_functions = {
     'square': {
         'area': square.area,
         'perimeter': square.perimeter,
+    },
+    'triangle': {
+        'area': triangle.area,
+        'perimeter': triangle.perimeter,
     }
 }
 
@@ -21,12 +26,13 @@ figure_functions = {
 sizes_required = {
     'circle': 1,  # Радиус
     'square': 1,  # Сторона
+    'triangle': 3,  # Три стороны
 }
 
 def calc(fig, func, size):
     """
     Выполняет расчёт площади или периметра для указанной фигуры.
-    
+
     :param fig: str, название фигуры (например, 'circle')
     :param func: str, функция ('area' или 'perimeter')
     :param size: list, параметры для расчёта (например, [3] для круга)
@@ -38,13 +44,17 @@ def calc(fig, func, size):
         raise ValueError(f"Invalid figure '{fig}', available figures are: {figs}")
     if func not in funcs:
         raise ValueError(f"Invalid function '{func}', available functions are: {funcs}")
-    
+
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
         raise ValueError(f"Incorrect number of parameters for {fig}. "
                          f"Expected {required_size}, got {len(size)}.")
-    
+
+    # Проверяем, что все параметры - числа
+    if not all(isinstance(x, (int, float)) for x in size):
+        raise TypeError(f"All size parameters must be numbers. Got: {size}")
+
     # Выполняем расчёт
     try:
         result = figure_functions[fig][func](*size)
@@ -69,7 +79,7 @@ if __name__ == "__main__":
     while len(size) != sizes_required.get(fig, 1):
         try:
             size = list(map(float, input(f"Input figure sizes separated by space "
-                                         f"(e.g., radius for circle or side for square):\n").split()))
+                                         f"(e.g., radius for circle, side for square, or sides for triangle):\n").split()))
         except ValueError:
             print("Invalid input. Please enter numeric values.")
 
