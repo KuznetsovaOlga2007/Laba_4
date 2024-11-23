@@ -22,6 +22,9 @@ def calc(fig: str, func: str, size: list) -> float:
             f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}."
         )
 
+    if any(s <= 0 for s in size):
+        raise ValueError(f"All size parameters must be positive. Got: {size}")
+
     result = eval(f"{fig}.{func}(*{size})")
     return result
 
