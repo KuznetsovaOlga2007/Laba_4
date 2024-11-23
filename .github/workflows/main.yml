@@ -43,7 +43,7 @@ jobs:
           pip install pytest flake8
 
       - name: Run tests
-        run: pytest tests/ --maxfail=1 --disable-warnings -q
+        run: pytest
 
       - name: Debug file structure
         run: ls -R
