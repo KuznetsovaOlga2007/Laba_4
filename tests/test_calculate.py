@@ -2,6 +2,7 @@ import unittest
 import circle
 import square
 
+
 class TestCalculate(unittest.TestCase):
     def test_valid_square_area(self):
         # Проверка корректного вычисления площади квадрата
