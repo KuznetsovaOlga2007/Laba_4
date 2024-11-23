@@ -43,8 +43,10 @@ jobs:
           pip install pytest flake8
 
       - name: Run tests
-        run: |
-          pytest C://geometric_lib//tests --maxfail=1 --disable-warnings -q
+        run: pytest tests/ --maxfail=1 --disable-warnings -q
+
+      - name: Debug file structure
+        run: ls -R
 
       - name: Lint code with flake8
         run: |
