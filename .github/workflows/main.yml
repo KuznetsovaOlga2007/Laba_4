@@ -15,41 +15,41 @@ on:
       - feat/tests
       - new_feat
       - new_features_465543
+
 jobs:
   test:
     runs-on: ubuntu-latest
 
     env:
-      FIO: "Гладких Иван Андреевич"  
-      GROUP: "М3117"    
+      FIO: "Гладких Иван Андреевич"
+      GROUP: "М3117"
 
     steps:
-  
+
+      # Шаг 1: Вывод информации
       - name: Print Info
         run: |
           echo "FIO: $FIO"
           echo "Group: $GROUP"
           echo "GitHub username: ${{ github.actor }}"
 
-  
+      # Шаг 2: Установка Python 3.13
       - name: Set up Python 3.13
         uses: actions/setup-python@v4
         with:
           python-version: '3.13'
 
-
+      # Шаг 3: Установка зависимостей
       - name: Install dependencies
-  	run: |
-    	   python -m pip install --upgrade pip
-   	   pip install pytest flake8
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # Если у вас есть файл requirements.txt
 
-
-      
+      # Шаг 4: Запуск тестов
       - name: Run tests
         run: pytest
 
-      
+      # Шаг 5: Линтинг кода с flake8
       - name: Lint code with flake8
         run: |
-          pip install flake8
           flake8 .
