@@ -5,7 +5,7 @@ on:
   push:
     branches:
       - master
-      - feat/tests
+      - release
   pull_request:
     branches:
       - master
