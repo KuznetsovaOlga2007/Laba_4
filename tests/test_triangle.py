@@ -35,13 +35,19 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
-    def test_negative_sides(self):
+    def test_negative_sides_area(self):
         # Arrange
         a, b, c = -5, 6, 7  # Отрицательная сторона
 
         # Act and Assert
         with self.assertRaises(ValueError):
             area(a, b, c)
+
+    def test_negative_sides_perimeter(self):
+        # Arrange
+        a, b, c = -5, 6, 7  # Отрицательная сторона
+
+        # Act and Assert
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
