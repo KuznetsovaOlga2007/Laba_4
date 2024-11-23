@@ -2,49 +2,6 @@ import unittest
 import circle
 import square
 
-figs = ["circle", "square"]
-funcs = ["perimeter", "area"]
-sizes = {"circle": 1, "square": 1}  # Указываем, что для каждой фигуры нужен 1 параметр
-
-
-def calc(fig: str, func: str, size: list) -> float:
-    assert fig in figs, f"Figure '{fig}' is not supported."
-    assert func in funcs, f"Function '{func}' is not supported."
-
-    if len(size) != sizes[fig]:
-        raise ValueError(
-            f"Invalid number of arguments for {fig}. Expected {sizes[fig]}, got {len(size)}."
-        )
-
-    result = eval(f"{fig}.{func}(*{size})")
-    return result
-
-
-if __name__ == "__main__":
-    func = ""
-    fig = ""
-    size = list()
-
-    while fig not in figs:
-        fig = input(f"Enter figure name, available are {figs}:\n")
-
-    while func not in funcs:
-        func = input(f"Enter function name, available are {funcs}:\n")
-
-    while len(size) != sizes[fig]:
-        size = list(
-            map(
-                int,
-                input(
-                    f"Input figure sizes separated by space, " f"1 for {fig}:\n"
-                ).split(" "),
-            )
-        )
-
-    result = calc(fig, func, size)
-    print(f"{func} of {fig} is {result}")
-
-
 class TestCalculate(unittest.TestCase):
     def test_valid_square_area(self):
         # Проверка корректного вычисления площади квадрата
