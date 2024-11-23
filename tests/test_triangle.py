@@ -25,13 +25,16 @@ class TestTriangle(unittest.TestCase):
         # Assert
         self.assertEqual(result, expected_perimeter)
 
-    def test_invalid_triangle(self):
+    def test_invalid_triangle_area(self):
         # Arrange
         a, b, c = 1, 2, 3  # Эти стороны не образуют треугольник
 
         # Act and Assert
         with self.assertRaises(ValueError):
             area(a, b, c)
+
+    def test_invalid_triangle_perimeter(self):
+        a, b, c = 1, 2, 3
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
@@ -51,13 +54,16 @@ class TestTriangle(unittest.TestCase):
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
-    def test_zero_sides(self):
+    def test_zero_sides_area(self):
         # Arrange
         a, b, c = 0, 6, 7  # Сторона равна нулю
 
         # Act and Assert
         with self.assertRaises(ValueError):
             area(a, b, c)
+
+    def test_zero_sides_perimeter(self):
+        a, b, c = 0, 6, 7
         with self.assertRaises(ValueError):
             perimeter(a, b, c)
 
