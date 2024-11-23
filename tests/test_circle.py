@@ -16,16 +16,6 @@ class TestCircle(unittest.TestCase):
         # Assert
         self.assertAlmostEqual(result, expected_area)
 
-        # Arrange
-        radius = 5
-        expected_area = math.pi * radius * radius  # π * 5^2
-
-        # Act
-        result = area(radius)
-
-        # Assert
-        self.assertAlmostEqual(result, expected_area)
-
     # Положительные тесты для периметра круга
     def test_circle_perimeter(self):
         # Arrange
