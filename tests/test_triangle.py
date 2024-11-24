@@ -6,9 +6,7 @@ from calculate import calc
 
 def test_triangle_area():
     """Проверка расчёта площади треугольника."""
-    result = calc(
-        'triangle', 'area', [
-            3, 4, 5])  # предполагается, что площадь по трём сторонам
+    result = calc('triangle', 'area', [3, 4, 5])  # площадь по трём сторонам
     assert pytest.approx(result, 0.01) == 6  # по формуле Герона
 
 
@@ -22,9 +20,8 @@ def test_triangle_perimeter():
 
 def test_incorrect_size_count_triangle():
     """Проверка некорректного количества параметров."""
-    with pytest.raises(ValueError, match="Incorrect parameters for triangle. Expected 3, got 2."):
+    with pytest.raises(ValueError, match="Wrong parameters. Expected 3,got 2"):
         calc('triangle', 'area', [3, 4])  # не хватает третьей стороны
-	
 
 
 def test_non_numeric_size_triangle():

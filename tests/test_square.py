@@ -20,7 +20,7 @@ def test_square_perimeter():
 
 def test_incorrect_size_count_square():
     """Проверка обработки некорректного количества параметров для квадрата."""
-    with pytest.raises(ValueError, match="Incorrect parameters for square."):
+    with pytest.raises(ValueError, match="Wrong parameters."):
         calc('square', 'perimeter', [])
 
 

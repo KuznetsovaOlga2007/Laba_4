@@ -51,8 +51,8 @@ def calc(fig, func, size):
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
-        raise ValueError(f"Incorrect parameters for {fig}. "
-                         f"Expected {required_size}, got {len(size)}.")
+        raise ValueError(f"Wrong parameters. {fig}. "
+                         f"Expected {required_size},got {len(size)}")
 
     # Проверяем, что все параметры - числа
     if not all(isinstance(x, (int, float)) for x in size):
@@ -82,8 +82,9 @@ if __name__ == "__main__":
     # Ввод размеров
     while len(size) != sizes_required.get(fig, 1):
         try:
-            size = list(map(float, input(f"Input figure sizes separated by space "
-                                         f"(e.g., radius for circle, side for square, or sides for triangle):\n").split()))
+            size = list(map(float, input(
+                "Input figure sizes separated by space "
+            ).split()))
         except ValueError:
             print("Invalid input. Please enter numeric values.")
 

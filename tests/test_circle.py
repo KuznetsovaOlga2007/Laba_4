@@ -20,7 +20,7 @@ def test_circle_perimeter():
 
 def test_incorrect_size_count_circle():
     """Проверка обработки некорректного количества параметров для круга."""
-    with pytest.raises(ValueError, match="Incorrect parameters for circle."):
+    with pytest.raises(ValueError, match="Wrong parameters."):
         calc('circle', 'area', [3, 4])
 
 
