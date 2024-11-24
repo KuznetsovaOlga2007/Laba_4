@@ -29,6 +29,7 @@ sizes_required = {
     'triangle': 3,  # Три стороны
 }
 
+
 def calc(fig, func, size):
     """
     Выполняет расчёт площади или периметра для указанной фигуры.
@@ -41,19 +42,21 @@ def calc(fig, func, size):
     """
     # Проверяем, что фигура и функция допустимы
     if fig not in figs:
-        raise ValueError(f"Invalid figure '{fig}', available figures are: {figs}")
+        raise ValueError(
+            f"Invalid figure '{fig}', available figures are: {figs}")
     if func not in funcs:
-        raise ValueError(f"Invalid function '{func}', available functions are: {funcs}")
+        raise ValueError(
+            f"Invalid function '{func}', available functions are: {funcs}")
 
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
-        raise ValueError(f"Incorrect number of parameters for {fig}. "
+        raise ValueError(f"Incorrect parameters for {fig}. "
                          f"Expected {required_size}, got {len(size)}.")
 
     # Проверяем, что все параметры - числа
     if not all(isinstance(x, (int, float)) for x in size):
-        raise TypeError(f"All size parameters must be numbers. Got: {size}")
+        raise TypeError(f"Parameters must be numbers. Got: {size}")
 
     # Выполняем расчёт
     try:
@@ -61,6 +64,7 @@ def calc(fig, func, size):
         return result
     except Exception as e:
         raise ValueError(f"Error calculating {func} for {fig}: {e}")
+
 
 if __name__ == "__main__":
     func = ''
