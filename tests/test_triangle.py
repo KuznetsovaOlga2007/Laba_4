@@ -21,12 +21,12 @@ def test_triangle_perimeter():
 
 
 def test_incorrect_size_count_triangle():
-    """Проверка обработки некорректного количества параметров для треугольника."""
-    with pytest.raises(ValueError, match="Incorrect number of parameters for triangle."):
+    """Проверка некорректного количества параметров."""
+    with pytest.raises(ValueError, match="Incorrect number of parameters."):
         calc('triangle', 'area', [3, 4])  # не хватает третьей стороны
 
 
 def test_non_numeric_size_triangle():
     """Проверка обработки нечислового параметра для треугольника."""
-    with pytest.raises(TypeError, match="All size parameters must be numbers."):
+    with pytest.raises(TypeError, match="Parameters must be numbers."):
         calc('triangle', 'area', ['side1', 'side2', 'side3'])

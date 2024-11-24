@@ -20,11 +20,11 @@ def test_square_perimeter():
 
 def test_incorrect_size_count_square():
     """Проверка обработки некорректного количества параметров для квадрата."""
-    with pytest.raises(ValueError, match="Incorrect number of parameters for square."):
+    with pytest.raises(ValueError, match="Incorrect parameters ."):
         calc('square', 'perimeter', [])
 
 
 def test_non_numeric_size_square():
     """Проверка обработки нечислового параметра для квадрата."""
-    with pytest.raises(TypeError, match="All size parameters must be numbers."):
+    with pytest.raises(TypeError, match="Parameters must be numbers."):
         calc('square', 'area', ['side'])
