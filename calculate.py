@@ -51,7 +51,7 @@ def calc(fig, func, size):
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
-        raise ValueError(f"Wrong parameters."
+        raise ValueError(f"Wrong parameters. "
                          f"Expected {required_size},got {len(size)}")
 
     # Проверяем, что все параметры - числа
