@@ -1,17 +1,42 @@
 import circle
 import square
+import triangle
 
-
-figs = ['circle', 'square']
+figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
-sizes = {}
+sizes = {
+	'circle-area' : 1,
+	'circle-perimeter' : 1,
+	'square-area' : 1,
+	'square-perimeter' : 1,
+	'triangle-area' : 3,
+	'triangle-perimeter' : 3
+}
 
 def calc(fig, func, size):
+	# Проверки наличия передаваемого аргумента
+
 	assert fig in figs
 	assert func in funcs
 
+	# Проверка на кол-во аргументов
+
+	key = f'{fig}-{func}'
+	expected_args = sizes.get(key)
+	assert expected_args is not None
+	assert len(size) == expected_args
+
+	# Проверка на неотрицательность аргументов
+	assert all(s >= 0 for s in size)
+
+	# проверка на существование треугольника
+
+	if fig == 'triangle':
+		a,b,c = size
+		assert a + b > c and a + c > b and b + c > a
+
 	result = eval(f'{fig}.{func}(*{size})')
-	print(f'{func} of {fig} is {result}')
+	return result
 
 if __name__ == "__main__":
 	func = ''
