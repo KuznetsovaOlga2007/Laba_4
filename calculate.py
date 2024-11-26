@@ -43,20 +43,24 @@ def calc(fig, func, size):
     # Проверяем, что фигура и функция допустимы
     if fig not in figs:
         raise ValueError(
-            f"Invalid figure '{fig}', available figures are: {figs}")
+            f"Invalid figure '{fig}', available figures are: {figs}"
+        )
     if func not in funcs:
         raise ValueError(
-            f"Invalid function '{func}', available functions are: {funcs}")
+            f"Invalid function '{func}', available functions are: {funcs}"
+        )
 
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
-        raise ValueError(f"Wrong parameters. Expected {required_size},got {len(size)}")  # Исправлено сообщение об ошибке
+        raise ValueError(
+            f"Wrong parameters. Expected {required_size}, got {len(size)}"
+        )
 
     # Проверяем, что все параметры - числа и положительные
     if not all(isinstance(x, (int, float)) for x in size):
         raise TypeError(f"Parameters must be numbers. Got: {size}")
-    if any(x <= 0 for x in size):  # Проверяем, чтобы все параметры были положительными
+    if any(x <= 0 for x in size):
         raise ValueError(f"Parameters must be positive numbers. Got: {size}")
 
     # Выполняем расчёт
@@ -92,6 +96,7 @@ if __name__ == "__main__":
     # Расчёт и вывод результата
     try:
         result = calc(fig, func, size)
-        print(f"{func.capitalize()} of {fig} is {result:.2f}")
+        print(f"{func.capitalize()} of {fig} is "
+              f"{result:.2f}")
     except ValueError as e:
         print(f"Error: {e}")
