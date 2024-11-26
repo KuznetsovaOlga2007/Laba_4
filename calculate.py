@@ -51,12 +51,13 @@ def calc(fig, func, size):
     # Проверяем количество параметров
     required_size = sizes_required.get(fig, 1)
     if len(size) != required_size:
-        raise ValueError(f"Wrong parameters. "
-                         f"Expected {required_size},got {len(size)}")
+        raise ValueError(f"Wrong parameters. Expected {required_size},got {len(size)}")  # Исправлено сообщение об ошибке
 
-    # Проверяем, что все параметры - числа
+    # Проверяем, что все параметры - числа и положительные
     if not all(isinstance(x, (int, float)) for x in size):
         raise TypeError(f"Parameters must be numbers. Got: {size}")
+    if any(x <= 0 for x in size):  # Проверяем, чтобы все параметры были положительными
+        raise ValueError(f"Parameters must be positive numbers. Got: {size}")
 
     # Выполняем расчёт
     try:
@@ -91,6 +92,6 @@ if __name__ == "__main__":
     # Расчёт и вывод результата
     try:
         result = calc(fig, func, size)
-        print(f"{func.capitalize()} of {fig} is {result}")
+        print(f"{func.capitalize()} of {fig} is {result:.2f}")
     except ValueError as e:
         print(f"Error: {e}")

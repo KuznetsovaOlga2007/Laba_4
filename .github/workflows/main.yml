@@ -4,27 +4,24 @@ on:
   push:
     branches:
       - main
-      - develop
       - feat/tests
-      - new_feat
-      - new_features_465543
   pull_request:
     branches:
       - main
       - develop
       - feat/tests
-      - new_feat
-      - new_features_465543
 
 jobs:
   test:
     runs-on: ubuntu-latest
-
-    env:
-      FIO: "Гладких Иван Андреевич"  
-      GROUP: "М3117"    
-
     steps:
+
+      - name: Output personal information
+        run: |
+          echo "Full Name: Гладких Иван Андреевич"
+          echo "Group Number: 3117"
+          echo "GitHub Username: $GITHUB_ACTOR"
+
       - name: Checkout code
         uses: actions/checkout@v3
 
