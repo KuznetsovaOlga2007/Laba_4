@@ -7,32 +7,8 @@ on:
     branches: [ "new_features_465296" ]
 
 jobs:
-  test-ubuntu:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Install python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.13'
-    
-      
-      - name: Run square test
-        run: python -m unittest test_square.py
-
-      - name: Run rectangle test
-        run: python -m unittest test_rectangle.py
-
-      - name: Run triangle test
-        run: python -m unittest test_triangle.py
-
-      - name: Run circle test
-        run: python -m unittest test_circle.py
-
-  test-windows:
-    runs-on: windows-latest
+  test-ubuntu-windows:
+    runs-on: [ ubuntu-latest, windows-latest ]
 
     steps:
       - uses: actions/checkout@v4
