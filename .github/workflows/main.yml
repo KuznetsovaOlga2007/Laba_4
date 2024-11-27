@@ -27,4 +27,4 @@ jobs:
 
         - name: Run unittests
           run: |
-            python -m unittest /Lab4/tests.py
+            python -m unittest tests.py
