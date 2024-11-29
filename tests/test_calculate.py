@@ -10,7 +10,7 @@ from calculate import calc
         ('square', 'perimeter', [-1], ValueError,
          "Parameters must be positive numbers"),
         ('triangle', 'area', [3, 4], ValueError,
-         "Wrong parameters. Expected 3, got 2"),
+         "Wrong parameters. Expected 3,got 2"),
         ('square', 'area', ['a'], TypeError,
          "Parameters must be numbers"),
     ]
