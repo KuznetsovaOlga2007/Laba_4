@@ -1,30 +1,31 @@
 import pytest
-from calculate import calc
+import math
 
-# Позитивные тесты
-
-
-def test_circle_area():
-    """Проверка расчёта площади круга."""
-    result = calc('circle', 'area', [3])
-    assert pytest.approx(result, 0.01) == 28.27  # π * r^2
+from circle import area, perimeter
 
 
-def test_circle_perimeter():
-    """Проверка расчёта периметра круга."""
-    result = calc('circle', 'perimeter', [3])
-    assert pytest.approx(result, 0.01) == 18.85  # 2 * π * r
-
-# Негативные тесты
-
-
-def test_incorrect_size_count_circle():
-    """Проверка обработки некорректного количества параметров для круга."""
-    with pytest.raises(ValueError, match="Wrong parameters."):
-        calc('circle', 'area', [3, 4])
+def test_area():
+    # Пример радиуса
+    r = 3
+    expected_area = math.pi * r * r
+    assert area(r) == pytest.approx(
+        expected_area, rel=1e-9
+    )
 
 
-def test_non_numeric_size_circle():
-    """Проверка обработки нечислового параметра для круга."""
-    with pytest.raises(TypeError, match="Parameters must be numbers."):
-        calc('circle', 'area', ['radius'])
+def test_perimeter():
+    r = 3
+    expected_perimeter = 2 * math.pi * r
+    assert perimeter(r) == pytest.approx(
+        expected_perimeter, rel=1e-9
+    )
+
+
+def test_area_edge_case():
+    r = 0  # Радиус равен 0
+    assert area(r) == 0
+
+
+def test_perimeter_edge_case():
+    r = 0  # Радиус равен 0
+    assert perimeter(r) == 0

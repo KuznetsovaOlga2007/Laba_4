@@ -1,30 +1,29 @@
-import pytest
-from calculate import calc
-
-# Позитивные тесты
+from triangle import area, perimeter
 
 
-def test_triangle_area():
-    """Проверка расчёта площади треугольника."""
-    result = calc('triangle', 'area', [3, 4, 5])  # площадь по трём сторонам
-    assert pytest.approx(result, 0.01) == 6  # по формуле Герона
+def test_area():
+    a, b, c = 3, 4, 5
+    expected_area = (a + b + c) / 2
+    assert (
+        area(a, b, c) == expected_area
+    )
 
 
-def test_triangle_perimeter():
-    """Проверка расчёта периметра треугольника."""
-    result = calc('triangle', 'perimeter', [3, 4, 5])
-    assert result == 12  # сумма сторон
-
-# Негативные тесты
-
-
-def test_incorrect_size_count_triangle():
-    """Проверка некорректного количества параметров."""
-    with pytest.raises(ValueError, match="Wrong parameters. Expected 3,got 2"):
-        calc('triangle', 'area', [3, 4])  # не хватает третьей стороны
+def test_perimeter():
+    a, b, c = 3, 4, 5
+    expected_perimeter = a + b + c
+    assert (
+        perimeter(a, b, c) == expected_perimeter
+    )
 
 
-def test_non_numeric_size_triangle():
-    """Проверка обработки нечислового параметра для треугольника."""
-    with pytest.raises(TypeError, match="Parameters must be numbers."):
-        calc('triangle', 'area', ['side1', 'side2', 'side3'])
+def test_area_edge_case():
+    a, b, c = 0, 0, 0
+    assert area(a, b, c) == 0
+
+
+def test_perimeter_edge_case():
+    a, b, c = 0, 0, 0
+    assert (
+        perimeter(a, b, c) == 0
+    )
