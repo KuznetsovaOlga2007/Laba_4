@@ -4,7 +4,6 @@ on:
     branches:
       - main
       - release 
-      - feat/tests
   pull_request:
     branches:
       - main
@@ -19,15 +18,18 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Output personal information
+        env:
+          FULL_NAME: ${{ secrets.FULL_NAME }}
+          GROUP_NUMBER: ${{ secrets.GROUP_NUMBER }}
         run: |
-          echo "Full Name: Gladkikh Ivan Andreevich"
-          echo "Group Number: 3117"
+          echo "Full Name: $FULL_NAME"
+          echo "Group Number: $GROUP_NUMBER"
           echo "GitHub Username: $GITHUB_ACTOR"
 
-      - name: Set up Python 3.11
+      - name: Set up Python 3.13
         uses: actions/setup-python@v4
         with:
-          python-version: 3.11
+          python-version: 3.13
 
       - name: Install dependencies
         run: |
