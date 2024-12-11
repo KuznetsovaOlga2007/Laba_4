@@ -18,6 +18,7 @@ jobs:
         with:
           python-version: '3.12'
 
+          
       - name: Run tests
         run: python test.py 
         continue-on-error: true
