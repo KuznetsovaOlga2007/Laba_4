@@ -12,7 +12,12 @@ def RectangleArea(x, y):
             input: 2, 5
             output: 10
     '''
+
+    if x <= 0 or y <= 0:
+        return "error"
+
     return x * y
+
 
 def RectanglePerimeter(x, y):
     '''  
@@ -28,4 +33,8 @@ def RectanglePerimeter(x, y):
             input: 2, 5
             output: 14
     '''
-    return  (x + y) * 2
+
+    if x <= 0 or y <= 0:
+        return "error"
+
+    return (x + y) * 2

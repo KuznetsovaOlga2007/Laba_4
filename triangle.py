@@ -12,6 +12,9 @@ def TriangleArea(a, h):
             input: 2, 5
             output: 5
     '''
+    if a <= 0 or h <= 0:
+        return "error"
+
     return a * h / 2
 
 def TrianglePerimeter(a, b, c):
@@ -28,7 +31,12 @@ def TrianglePerimeter(a, b, c):
         Пример работы:
             input: 2, 5, 6
             output: 13
-
-
     '''
+
+    if a <= 0 or b <= 0 or c <= 0:
+        return "error"
+
+    if (a + b) <= c or (a + c) <= b or (b + c) <= a:
+        return "error"
+
     return a + b + c

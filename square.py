@@ -12,6 +12,10 @@ def SquareArea(x):
             output: 49
 
     '''
+
+    if x <= 0:
+        return "error"
+
     return x * x
 
 def SquarePerimeter(x):
@@ -28,5 +32,9 @@ def SquarePerimeter(x):
             output: 28
 
     '''
-    return  4 * x
+
+    if x <= 0:
+        return "error"
+
+    return 4 * x
 

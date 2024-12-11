@@ -15,6 +15,9 @@ def CircleArea(r):
             output: 9*pi
 
     '''
+
+    if r <= 0:
+        return "error"
     return math.pi * r * r
 
 
@@ -33,5 +36,9 @@ def CirclePerimeter(r):
             output: 6*pi
 
     '''
+
+    if r <= 0:
+        return "error"
+
     return 2 * math.pi * r
 
