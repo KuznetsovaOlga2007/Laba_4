@@ -1,9 +1,9 @@
 name: CI
 on: 
   push:
-    branches: ["labwork4_467771"]
+    branches: ["labwork_5_467934"]
   pull_request:
-    branches: ["labwork4_467771"] 
+    branches: ["labwork_5_467934"] 
   workflow_dispatch:
 jobs:
   test: 
