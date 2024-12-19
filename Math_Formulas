@@ -1,0 +1,61 @@
+/**
+ * Вычисляет площадь круга.
+ * Формула: S = πR²
+ * @param radius Радиус круга.
+ * @return Площадь круга.
+ */
+double calculate_circle_area(double radius) {
+    return M_PI * radius * radius;
+}
+
+/**
+ * Вычисляет площадь прямоугольника.
+ * Формула: S = ab
+ * @param length Длина прямоугольника.
+ * @param width Ширина прямоугольника.
+ * @return Площадь прямоугольника.
+ */
+double calculate_rectangle_area(double length, double width) {
+    return length * width;
+}
+
+/**
+ * Вычисляет площадь квадрата.
+ * Формула: S = a²
+ * @param side Длина стороны квадрата.
+ * @return Площадь квадрата.
+ */
+double calculate_square_area(double side) {
+    return side * side;
+}
+
+/**
+ * Вычисляет периметр круга.
+ * Формула: P = 2πR
+ * @param radius Радиус круга.
+ * @return Периметр круга.
+ */
+double calculate_circle_perimeter(double radius) {
+    return 2 * M_PI * radius;
+}
+
+/**
+ * Вычисляет периметр прямоугольника.
+ * Формула: P = 2a + 2b
+ * @param length Длина прямоугольника.
+ * @param width Ширина прямоугольника.
+ * @return Периметр прямоугольника.
+ */
+double calculate_rectangle_perimeter(double length, double width) {
+    return 2 * (length + width);
+}
+
+/**
+ * Вычисляет периметр квадрата.
+ * Формула: P = 4a
+ * @param side Длина стороны квадрата.
+ * @return Периметр квадрата.
+ */
+double calculate_square_perimeter(double side) {
+    return 4 * side;
+}
