@@ -105,8 +105,8 @@ Returns area of a square with side `a`
 Returns perimiter of a square with side `a`
 
 ```
-> perimiter(2)
-8
+> perimiter(3)
+12
 ```
 
 # Changelog
