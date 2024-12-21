@@ -1,0 +1,165 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsmath}
+\usepackage{listings} % For code highlighting
+\usepackage{xcolor} % For syntax highlighting colors
+\usepackage{hyperref} % For clickable links
+
+% Code Syntax Highlighting Settings
+\lstset{
+    language=Python,
+    basicstyle=\ttfamily\small,
+    keywordstyle=\color{blue},
+    commentstyle=\color{gray},
+    stringstyle=\color{red},
+    showstringspaces=false,
+    numbers=left,
+    numberstyle=\tiny\color{gray},
+    stepnumber=1,
+    numbersep=10pt,
+    backgroundcolor=\color{white},
+    tabsize=4,
+    breaklines=true,
+    breakatwhitespace=false,
+    frame=single,
+    captionpos=b
+}
+
+\begin{document}
+
+% Title Page
+\begin{titlepage}
+    \centering
+    {\large \textbf{Лабораторная работа}}\\[1cm]
+    {\Large \textbf{Документация к библиотеке geometric\_lib}}\\[2cm]
+    \textbf{Выполнил:} МД Абу Хуссаин Рифад \\[0.5cm]
+    \textbf{Группа:} M3113 \\[0.5cm]
+    \textbf{Преподаватель:} Жуйков Артём Сергеевич \\[2cm]
+    \vfill
+    Санкт-Петербург, 2024 г.
+\end{titlepage}
+
+% Table of Contents
+\tableofcontents
+\newpage
+
+% General Description of the Library
+\section{Общее описание библиотеки}
+Библиотека \texttt{geometric\_lib} предназначена для вычисления площадей и периметров различных геометрических фигур, таких как круг, прямоугольник, квадрат и треугольник. 
+
+Репозиторий библиотеки доступен по ссылке:  
+\url{https://github.com/smartiqaorg/geometric_lib}
+
+\newpage
+
+% Code and Logic Description
+\section{Описание файлов программ из репозитория}
+
+\subsection*{Круг (Circle)}
+\textbf{Функции:}
+\begin{itemize}
+    \item \texttt{area(r)}: вычисляет площадь круга по радиусу \( r \) по формуле:  
+    \[
+    S = \pi r^2
+    \]
+    \item \texttt{perimeter(r)}: вычисляет длину окружности по формуле:  
+    \[
+    P = 2 \pi r
+    \]
+\end{itemize}
+
+\begin{lstlisting}[caption={Код для вычисления площади и периметра круга}]
+import math
+
+def area(r):
+    return math.pi * r * r
+
+def perimeter(r):
+    return 2 * math.pi * r
+\end{lstlisting}
+
+\newpage
+
+\subsection*{Прямоугольник (Rectangle)}
+\textbf{Функции:}
+\begin{itemize}
+    \item \texttt{area(a, b)}: вычисляет площадь прямоугольника с длиной \( a \) и шириной \( b \):  
+    \[
+    S = a \cdot b
+    \]
+    \item \texttt{perimeter(a, b)}: вычисляет периметр прямоугольника:  
+    \[
+    P = 2(a + b)
+    \]
+\end{itemize}
+
+\begin{lstlisting}[caption={Код для вычисления площади и периметра прямоугольника}]
+def area(a, b):
+    return a * b
+
+def perimeter(a, b):
+    return 2 * (a + b)
+\end{lstlisting}
+
+\newpage
+
+\subsection*{Квадрат (Square)}
+\textbf{Функции:}
+\begin{itemize}
+    \item \texttt{area(a)}: вычисляет площадь квадрата со стороной \( a \):  
+    \[
+    S = a^2
+    \]
+    \item \texttt{perimeter(a)}: вычисляет периметр квадрата:  
+    \[
+    P = 4a
+    \]
+\end{itemize}
+
+\begin{lstlisting}[caption={Код для вычисления площади и периметра квадрата}]
+def area(a):
+    return a * a
+
+def perimeter(a):
+    return 4 * a
+\end{lstlisting}
+
+\newpage
+
+\subsection*{Треугольник (Triangle)}
+\textbf{Функции:}
+\begin{itemize}
+    \item \texttt{area(a, h)}: вычисляет площадь треугольника с основанием \( a \) и высотой \( h \):  
+    \[
+    S = \frac{a \cdot h}{2}
+    \]
+    \item \texttt{perimeter(a, b, c)}: вычисляет периметр треугольника как сумму сторон:  
+    \[
+    P = a + b + c
+    \]
+\end{itemize}
+
+\begin{lstlisting}[caption={Код для вычисления площади и периметра треугольника}]
+def area(a, h):
+    return a * h / 2
+
+def perimeter(a, b, c):
+    return a + b + c
+\end{lstlisting}
+
+\newpage
+
+% Links to the Project
+\section{Ссылки на проект}
+По следующим ссылкам можно просмотреть исходный код и документацию проекта:
+
+\begin{itemize}
+    \item \textbf{GitHub репозиторий:}  
+    \url{https://github.com/smartiqaorg/geometric_lib}
+
+    \item \textbf{Overleaf проект:}  
+    \url{https://www.overleaf.com/read/rmdhyfxshfrt#796a76}
+\end{itemize}
+
+\end{document}
