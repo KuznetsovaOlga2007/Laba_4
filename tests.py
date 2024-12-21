@@ -2,7 +2,7 @@ import circle
 import square
 import triangle
 import calculate
-import pytest
+# import pytest
 
 
 class TestCircle:
