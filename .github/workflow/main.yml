@@ -3,14 +3,11 @@ name: Tests
 on: 
   push:
     branches:
-      - main
-      - develop
       - tests
   pull_request:
     branches:
-      - main
-      - develop
       - tests
+  workflow_dispatch:
 
 env:
   STUDENT_NAME: Караяниди Богдан Евгеньевич
