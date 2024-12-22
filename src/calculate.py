@@ -1,33 +1,45 @@
 import circle
 import square
+import triangle
 
+shapes = {"circle": 1, "square": 1, "triangle": 3}
 
-figs = ['circle', 'square']
-funcs = ['perimeter', 'area']
-sizes = {}
+calculations = ["perimeter", "area"]
 
-def calc(fig, func, size):
-	assert fig in figs
-	assert func in funcs
+def validate_sizes(shape, dimensions):
+    if any(dim <= 0 for dim in dimensions):
+        raise ValueError("All dimensions must be positive numbers.")
 
-	result = eval(f'{fig}.{func}(*{size})')
-	print(f'{func} of {fig} is {result}')
+    if shape == "triangle":
+        a, b, c = dimensions
+        if not (a + b > c and a + c > b and b + c > a):
+            raise ValueError("The provided dimensions do not form a valid triangle.")
+
+def compute(shape, calculation, dimensions):
+    assert shape in shapes
+    assert calculation in calculations
+
+    validate_sizes(shape, dimensions)
+
+    result = eval(f"{shape}.{calculation}(*{dimensions})")
+    return result
 
 if __name__ == "__main__":
-	func = ''
-	fig = ''
-	size = list()
-    
-	while fig not in figs:
-		fig = input(f"Enter figure name, avaliable are {figs}:\n")
-	
-	while func not in funcs:
-		func = input(f"Enter function name, avaliable are {funcs}:\n")
-	
-	while len(size) != sizes.get(f"{func}-{fig}", 1):
-		size = list(map(int, input("Input figure sizes separated by space, 1 for circle and square\n").split(' ')))
-	
-	calc(fig, func, size)
+    calculation_type = ""
+    shape_type = ""
 
+    while shape_type not in shapes:
+        shape_type = input(f"Please enter the name of the shape (available: {list(shapes.keys())}):\n")
 
+    while calculation_type not in calculations:
+        calculation_type = input(f"Please enter the type of calculation (available: {calculations}):\n")
 
+    dimensions = []
+    required_dimensions = shapes[shape_type]
+
+    while len(dimensions) != required_dimensions:
+        dimension_input = input(f"Enter the dimensions for the {shape_type}, separated by spaces:\n")
+        dimensions = list(map(float, dimension_input.split()))
+
+    result = compute(shape_type, calculation_type, dimensions)
+    print(f"The result of the {calculation_type} of the {shape_type} is: {result}")
