@@ -8,30 +8,30 @@ from calculate import calc
 
 class TestCircle:
     def test_circle_area(self):
-        assert circle.area(2) == math.pi * 2 * 2
+        assert circle.area(2) == math.pi * 2 ** 2
 
     def test_circle_perimeter(self):
-        assert circle.perimeter(2) == 2 * math.pi * 2
+        assert circle.perimeter(2) == 2 * math.pi * 2 
 
 
 class TestSquare:
     def test_square_area(self):
         assert square.area(5) == 25
-        assert square.area(2) == 4
+        assert square.area(6) == 36
 
     def test_square_perimeter(self):
         assert square.perimeter(4) == 16
-        assert square.perimeter(2) == 8
+        assert square.perimeter(3) == 12
 
 
 class TestTriangle:
     def test_triangle_area(self):
         assert triangle.area(6, 6, 6) == 15.588457268119896
-        assert triangle.area(8, 17, 15) == 60
+        assert triangle.area(3, 4, 5) == 6
 
     def test_triangle_perimeter(self):
         assert triangle.perimeter(6, 6, 6) == 18
-        assert triangle.perimeter(8, 17, 15) == 40
+        assert triangle.perimeter(3, 4, 5) == 12
 
 
 class TestCalc:
